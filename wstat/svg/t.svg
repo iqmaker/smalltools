@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Example rect02 - rounded rectangles</desc>
+
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x="1" y="1" width="1198" height="398"
+        fill="none" stroke="blue" stroke-width="2"/>
+
+  <rect x="100" y="100" width="400" height="200" rx="10"
+        fill="green" />
+
+  <g transform="translate(700 210) rotate(-30)">
+    <rect x="0" y="0" width="400" height="200" rx="50"
+          fill="none" stroke="purple" stroke-width="30" />
+  </g>
+  
+  <path d="M 0 112
+L 20 124 L 40 129 L 60 126 L 80 120 L 100 111 L 120 104 L 140 101 L 164 106 L 170 103 L 
+173 80 L 178 60 L 185 39
+L 200 30 L 220 30 L 240 40 L 260 61 L 280 69 L 290 68 L 288 77 L 272 85 L 250 85 L 230 85 
+L 215 88 L 211 95
+L 215 110 L 228 120 L 241 130 L 251 149 L 252 164 L 242 181 L 221 189 L 200 191 L 180 
+193 L 160 192 L 140 190 L 120 190
+L 100 188 L 80 182 L 61 179 L 42 171 L 30 159 L 13 140 Z"/>
+
+
+<path d="M 0 312
+C 40 360 120 280 160 306 C 160 306 165 310 170 303
+C 180 200 220 220 260 261 C 260 261 280 273 290 268
+C 288 280 272 285 250 285 C 195 283 210 310 230 320
+C 260 340 265 385 200 391 C 150 395 30 395 0 312 Z"/>
+</svg>

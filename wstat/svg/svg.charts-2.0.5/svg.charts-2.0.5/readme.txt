@@ -1,0 +1,135 @@
+``svg.charts`` - Package for generating SVG Charts in Python
+============================================================
+
+.. contents::
+
+Status and License
+------------------
+
+``svg.charts`` is a pure-python library for generating charts and graphs
+in SVG, originally based on the SVG::Graph Ruby package by Sean E. Russel.
+
+``svg.charts`` supercedes ``svg_charts`` 1.1 and 1.2.
+
+``svg.charts`` is written by Jason R. Coombs.  It is licensed under an
+`MIT-style permissive license
+<https://py-svg.svn.sourceforge.net/svnroot/py-svg/trunk/docs/license.txt>`_.
+
+You can install it with ``easy_install svg.charts``, or from the
+`subversion repository
+<https://py-svg.svn.sourceforge.net/svnroot/py-svg/trunk#egg=svg.charts-dev>`_ with
+``easy_install svg.charts==dev``.
+
+Acknowledgements
+----------------
+
+``svg.charts`` depends heavily on lxml and cssutils. Thanks to the
+contributors of those projects for stable, performant, standards-based
+packages.
+
+Sean E. Russel for creating the SVG::Graph Ruby package from which this
+Python port was originally derived.
+
+Leo Lapworth for creating the SVG::TT::Graph package which the Ruby
+port was based on.
+
+Stephen Morgan for creating the TT template and SVG.
+
+Getting Started
+---------------
+
+``svg.charts`` has some examples (taken directly from the reference implementation)
+in `tests/testing.py <https://py-svg.svn.sourceforge.net/svnroot/py-svg/trunk/tests/testing.py>`_.
+These examples show sample usage of the various chart types. They should provide a
+good starting point for learning the usage of the library.
+
+An example of using ``svg.charts`` in a `CherryPy
+<http://www.cherrypy.org/>`_ web app can be found in `jaraco.site.charts
+<https://svn.jaraco.com/jaraco/python/jaraco.site/trunk/jaraco/site/charts.py>`_.
+If the site is working, you can see the `rendered output here
+<http://www.jaraco.com/charts/plot>`_.
+
+Upgrade Notes
+-------------
+
+Upgrading from 1.x to 2.0
+
+I suggest removing SVG 1.0 from the python installation.  This involves removing the SVG directory (or svg_chart*) from site-packages.
+
+Change import statements to import from the new namespace.
+
+from SVG import Bar
+Bar.VerticalBar(...)
+becomes
+from svg.charts.bar import VerticalBar
+VerticalBar(...)
+
+More To-Dos
+-----------
+
+-  Documentation! This package desperately needs some high-level,
+   tutorial-style how-tos, and not just links to example code.
+-  Implement javascript-based animation (See JellyGraph for a Silverlight example of what simple animation can do for a charting library).
+
+Reporting Bugs and Getting Help
+-------------------------------
+
+This project is `hosted at sourceforge
+<https://sourceforge.net/projects/py-svg/>`_. Please use that site for
+reporting bugs and requesting help. Patches are also welcome.
+
+Changes
+-------
+
+2.0.5
+~~~~~
+
+* Altered the way CSS files are loaded, so they can be more easily
+  customized by subclasses (and less dependent on the class names).
+
+2.0.4
+~~~~~
+
+* A small attempt to improve the documentation - added links to examples
+  that already exist.
+
+2.0.3
+~~~~~
+
+* Fix IndexError in ``svg.charts.plot.Plot.field_size`` when there are
+  only two values returned by float_range (in the case there are only
+  two different 'y' values in the data) and scale_y_integers == True.
+  Credit to `Jean Schurger <http://schurger.org/>`_ for the patch.
+* Fixed problem in setup.py installing on Unix OS (case sensitivity of 
+  readme.txt). Credit to Luke Miller and Jean Schurger for supplying
+  a patch for this issue.
+
+2.0.2
+~~~~~
+
+* Updated cssutils dependency to 0.9.6 (currently in beta) to require the CSS profiles support.
+* Completed an SVG CSS profile according to the SVG 1.1 spec.
+
+2.0.1
+~~~~~
+
+* Added preliminary SVG CSS profile, suitable for stock CSS properties.
+
+2.0
+~~~~~
+
+* First major divergence from the Ruby reference implementation
+* Now implemented as a namespace package (svg.charts instead of svg_charts)
+* Changed XML processor to lxml
+* Enabled extensible css support using cssutils, greatly reducing static CSS
+* Renamed modules and methods to be more consistent with PEP-8 naming convention
+
+1.2
+~~~
+
+* Bug fixes
+
+1.1
+~~~
+
+* First public release

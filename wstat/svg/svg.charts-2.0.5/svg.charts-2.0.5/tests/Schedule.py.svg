@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:a3="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" a3:scriptImplementation="Adobe" width="640" viewBox="0 0 640 480" height="480">
+  <!-- Created with SVG.Graph -->
+  <!-- SVG.Graph by Jason R. Coombs -->
+  <!-- Based on SVG::Graph by Sean E. Russel -->
+  <!-- Based on Perl SVG:TT:Graph by Leo Lapworth & Stephan Morgan -->
+  <!-- //////////////////////////////////////////////////////////////////-->
+  <defs>
+    <style type="text/css">/*&#13;
+$Id: graph.css 81 2009-09-01 02:04:44Z jaraco $&#13;
+&#13;
+Base styles for svg.charts.Graph&#13;
+*/
+.svgBackground {
+    fill: #fff
+    }
+.graphBackground {
+    fill: #f0f0f0
+    }
+/* graphs titles */
+.mainTitle {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.subTitle {
+    text-anchor: middle;
+    fill: #999;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.axis {
+    stroke: #000;
+    stroke-width: 1px
+    }
+.guideLines {
+    stroke: #666;
+    stroke-width: 1px;
+    stroke-dasharray: 5, 5
+    }
+.xAxisLabels {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisLabels {
+    text-anchor: end;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.xAxisTitle {
+    text-anchor: middle;
+    fill: #f00;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisTitle {
+    fill: #f00;
+    text-anchor: middle;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.dataPointLabel {
+    fill: #000;
+    text-anchor: middle;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.staggerGuideLine {
+    fill: none;
+    stroke: #000;
+    stroke-width: 0.5px
+    }
+.keyText {
+    fill: #000;
+    text-anchor: start;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+/*&#13;
+$Id: bar.css 65 2008-10-25 21:32:35Z jaraco $&#13;
+&#13;
+default fill styles for multiple datasets (probably only use a single&#13;
+dataset on this graph though)&#13;
+*/
+.key1, .fill1 {
+    fill: #f00;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 0.5px
+    }
+.key2, .fill2 {
+    fill: #00f;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key3, .fill3 {
+    fill: #0f0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key4, .fill4 {
+    fill: #fc0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key5, .fill5 {
+    fill: #0cf;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key6, .fill6 {
+    fill: #f0f;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key7, .fill7 {
+    fill: #0ff;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key8, .fill8 {
+    fill: #ff0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key9, .fill9 {
+    fill: #c66;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key10, .fill10 {
+    fill: #639;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key11, .fill11 {
+    fill: #390;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key12, .fill12 {
+    fill: #96F;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }</style>
+  </defs>
+  <!-- include default stylesheet if none specified -->
+  <!--SVG Background-->
+  <rect y="0" width="640" class="svgBackground" x="0" height="480"/>
+  <g transform="translate (107.8 26)">
+    <rect y="0" x="0" height="411.0" class="graphBackground" width="525.2"/>
+    <path id="xAxis" d="M 0 0 v411.0" class="axis"/>
+    <path id="yAxis" d="M 0 411.0 h525.2" class="axis"/>
+    <text class="xAxisLabels" x="0.0" y="426.0" transform="rotate(90 0 414) translate(0 -3)" style="text-anchor: start">05/19</text>
+    <text class="xAxisLabels" x="40.4" y="426.0" transform="rotate(90 40 414) translate(0 -3)" style="text-anchor: start">05/26</text>
+    <text class="xAxisLabels" x="80.8" y="426.0" transform="rotate(90 80 414) translate(0 -3)" style="text-anchor: start">06/02</text>
+    <text class="xAxisLabels" x="121.2" y="426.0" transform="rotate(90 121 414) translate(0 -3)" style="text-anchor: start">06/09</text>
+    <text class="xAxisLabels" x="161.6" y="426.0" transform="rotate(90 161 414) translate(0 -3)" style="text-anchor: start">06/16</text>
+    <text class="xAxisLabels" x="202.0" y="426.0" transform="rotate(90 202 414) translate(0 -3)" style="text-anchor: start">06/23</text>
+    <text class="xAxisLabels" x="242.4" y="426.0" transform="rotate(90 242 414) translate(0 -3)" style="text-anchor: start">06/30</text>
+    <text class="xAxisLabels" x="282.8" y="426.0" transform="rotate(90 282 414) translate(0 -3)" style="text-anchor: start">07/07</text>
+    <text class="xAxisLabels" x="323.2" y="426.0" transform="rotate(90 323 414) translate(0 -3)" style="text-anchor: start">07/14</text>
+    <text class="xAxisLabels" x="363.6" y="426.0" transform="rotate(90 363 414) translate(0 -3)" style="text-anchor: start">07/21</text>
+    <text class="xAxisLabels" x="404.0" y="426.0" transform="rotate(90 404 414) translate(0 -3)" style="text-anchor: start">07/28</text>
+    <text class="xAxisLabels" x="444.4" y="426.0" transform="rotate(90 444 414) translate(0 -3)" style="text-anchor: start">08/04</text>
+    <text class="xAxisLabels" x="484.8" y="426.0" transform="rotate(90 484 414) translate(0 -3)" style="text-anchor: start">08/11</text>
+    <path d="M 40.4 0 v411.0" class="guideLines"/>
+    <path d="M 80.8 0 v411.0" class="guideLines"/>
+    <path d="M 121.2 0 v411.0" class="guideLines"/>
+    <path d="M 161.6 0 v411.0" class="guideLines"/>
+    <path d="M 202.0 0 v411.0" class="guideLines"/>
+    <path d="M 242.4 0 v411.0" class="guideLines"/>
+    <path d="M 282.8 0 v411.0" class="guideLines"/>
+    <path d="M 323.2 0 v411.0" class="guideLines"/>
+    <path d="M 363.6 0 v411.0" class="guideLines"/>
+    <path d="M 404.0 0 v411.0" class="guideLines"/>
+    <path d="M 444.4 0 v411.0" class="guideLines"/>
+    <path d="M 484.8 0 v411.0" class="guideLines"/>
+    <text class="yAxisLabels" x="-3" y="363.625" style="text-anchor: end">History 107</text>
+    <text class="yAxisLabels" x="-3" y="260.875" style="text-anchor: end">Algebra 011</text>
+    <text class="yAxisLabels" x="-3" y="158.125" style="text-anchor: end">Psychology 101</text>
+    <text class="yAxisLabels" x="-3" y="55.375" style="text-anchor: end">Acting 105</text>
+    <rect y="308.25" x="0.0" height="92.75" class="fill2" width="236.521348315"/>
+    <rect y="205.5" x="78.8404494382" height="92.75" class="fill3" width="394.202247191"/>
+    <rect y="102.75" x="225.258426966" height="92.75" class="fill4" width="236.521348315"/>
+    <rect y="0.0" x="275.941573034" height="92.75" class="fill5" width="225.258426966"/>
+    <g/>
+  </g>
+  <text y="16" x="320" class="mainTitle">Billy's Schedule</text>
+</svg>

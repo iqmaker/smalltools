@@ -1,0 +1,42 @@
+ford_focus 2693 462 255 43
+ford_mondeo 952 127 106
+mazda_3 702 265 238 24
+skoda_ocatvia 605 131 59 12
+mazda_6 568 204 187 16
+honda_civic 556 359 94 45
+honda_accord 536 109
+audi_a6 533 154
+audi_a4 392 136 77
+ford_fusion 296
+mitsubishi_lancer 286 204 72
+honda_crv 239 228
+chevrolet_aveo 391 76
+chevrolet_niva 366 32
+chevrolet_lanos 296 49 31
+hyundai_accent 353 318
+nissan_almera 220 756 148
+bmw_x5 315 195 31
+kia_sportage  191
+hyundai_sonata 147 125
+kia_spectra 393 145
+nissan_maxima 108 261 73
+opel_astra 1028 366 132 85
+opel_vectra 868 380 168
+opel_omega 667 183
+renault_logan 661 90
+renault_megan 575 95 70
+nissan_primera 516 222 84
+renault_laguna 261 32
+opel_zafira 215
+opel_corsa 193 69
+toyota_camry 468 165 87
+toyota_corolla 308 154 42
+toyota_avensis 303 62 76
+toyota_land_cruiser 217 159 40
+volkswagen_passat 124 857 88 29
+volkswagen_golf 92 496 44
+
+
+
+
+

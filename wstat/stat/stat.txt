@@ -1,0 +1,228 @@
+мазда mazda
+3
+6
+323
+626
+cx-7
+
+skoda шкода
+октави€
+octavia
+fabia
+фабиа
+
+митсубиси mitsubishi
+лансер 
+lancer
+outlander
+оутландер
+carisma
+каризма
+colt
+кольт
+galant
+галант
+outlander
+оутландер
+pajero
+паджеро
+
+ford форд
+фокус 
+focus
+мондео
+mondeo 
+c-max
+fiesta
+фиеста
+fusion
+фьюжен
+
+хонда honda
+аккорд
+accord
+цивик
+civic
+cr-v
+
+audi ауди
+а4
+a4
+а6
+a6 
+a8
+q7
+q7
+
+бмв bmw
+318
+318
+320
+320 
+525
+525
+530
+530
+7
+7
+x5
+x5
+
+chevrolet шевроле
+aveo
+авео
+captiva
+каптива
+lacetti
+лачети
+lanos
+ланос
+нива
+niva
+fiesta
+
+hyundai хундай
+accent
+elantra
+getz
+santa fe
+sonata
+starex
+tucson
+
+kia киа
+ceed
+rio
+sorento
+spectra
+sportage
+
+mercedes-benz мерседес
+190
+230
+c180
+c200
+c220
+c230
+cl500
+e200
+e220
+e230
+e240
+e280
+e320
+g500
+gl320
+ml320
+ml350
+s320
+s350
+s500
+s600
+viano
+
+nissan ниссан
+almera
+альмера
+maxima
+максима
+micra
+микра
+murano
+мурано
+note
+ноут
+pathfinder
+патфайндер
+patrol
+патрол
+primera
+примера
+qashqai
+кашкай
+teana
+тиана
+теана
+tiida
+тиида
+x-trail
+
+opel опель
+astra
+астра
+corsa
+корса
+omega
+омега
+vectra
+вектра
+zafira
+зафира
+
+renault рено
+laguna
+лагуна
+logan
+логан
+megane
+меган
+scenic 
+сценик
+symbol
+симбол
+
+toyota тойота
+auris
+аурис
+avensis
+авенсис
+camry
+камри
+carina
+карина
+celica
+селика
+corolla
+королла
+highlander
+хайлендер
+land cruiser
+ленд крузер
+land cruiser 100
+ленд крузер 100
+land cruiser 200
+ленд крузер 200
+land cruiser prado 
+land cruiser prado 120
+land cruiser prado 150
+ленд крузер прадо 
+ленд крузер прадо 120
+ленд крузер прадо 150
+mark ii
+марк 2
+prius
+приус
+rav 4
+рав 4
+yaris
+€рис
+
+volkswagen фольксваген фольцваген
+golf
+гольф
+passat
+пассат
+touareg
+туарег
+
+
+
+
+
+
+
+
+
+ 
+
+

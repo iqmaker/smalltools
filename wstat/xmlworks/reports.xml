@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reports>
+<report id="buy_auto" title="Спрос на автомобили в россии" type="simple" >
+    <item value="Ford, Форд" base="" deep="купить" />
+    <item value="ВАЗ" base="" deep="купить" />
+    <item value="Audi, Ауди" base="" deep="купить" />
+    <item value="BMW, БМВ" base="" deep="купить" />
+    <item value="CHEVROLET, Шевроле" base="" deep="купить" />
+    <item value="Honda, Хонда" base="" deep="купить" />
+    <item value="HYUNDAI Хундай" base="" deep="купить" />
+    <item value="Kia, Киа" base="" deep="купить" />
+    <item value="Mazda, Мазда" base="" deep="купить" />
+    <item value="Mercedes, Мерседес" base="" deep="купить" />
+    <item value="Mitsubishi, Мицубиси" base="" deep="купить" />
+    <item value="Nissan, Ниссан" base="" deep="купить" />
+    <item value="Opel, Опель" base="" deep="купить" />
+    <item value="Peugeot, Пежо" base="" deep="купить" />
+    <item value="Toyota, Тойота" base="" deep="купить" />
+    <item value="Skoda, Шкода" base="" deep="купить" />    
+    <item value="Subaru, Субару" base="" deep="купить" />    
+    <item value="Lexus, Лексус" base="" deep="купить" />    
+    <item value="Infinity, Инфинити" base="" deep="купить" />
+    <item value="Volkswagen, Фольцваген" base="" deep="купить" />
+ </report>
+ 
+ <report id="razbor_avto_need" title="Спрос на авторазборки в России по маркам" type="simple" >
+    <item value="Ford, Форд" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="ВАЗ" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Audi, Ауди" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="BMW, БМВ" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="CHEVROLET, Шевроле" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Honda, Хонда" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="HYUNDAI Хундай" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Kia, Киа" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Mazda, Мазда" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Mercedes, Мерседес" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Mitsubishi, Мицубиси" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Nissan, Ниссан" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Opel, Опель" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Peugeot, Пежо" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Toyota, Тойота" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Skoda, Шкода" base="" deep="разборка, разбор, запчасти б у" />    
+    <item value="Subaru, Субару" base="" deep="разборка, разбор, запчасти б у" />    
+    <item value="Lexus, Лексус" base="" deep="разборка, разбор, запчасти б у" />    
+    <item value="Infinity, Инфинити" base="" deep="разборка, разбор, запчасти б у" />
+    <item value="Volkswagen, Фольцваген" base="" deep="разборка, разбор, запчасти б у" />
+ </report>
+ 
+ <report id="buy_repairs" title="Спрос на запчасти по маркам" type="simple" >
+    <item value="Ford, Форд" base="" deep="запчасти" />
+    <item value="ВАЗ" base="" deep="запчасти" />
+    <item value="Audi, Ауди" base="" deep="запчасти" />
+    <item value="BMW, БМВ" base="" deep="запчасти" />
+    <item value="CHEVROLET, Шевроле" base="" deep="запчасти" />
+    <item value="Honda, Хонда" base="" deep="запчасти" />
+    <item value="HYUNDAI Хундай" base="" deep="запчасти" />
+    <item value="Kia, Киа" base="" deep="запчасти" />
+    <item value="Mazda, Мазда" base="" deep="запчасти" />
+    <item value="Mercedes, Мерседес" base="" deep="запчасти" />
+    <item value="Mitsubishi, Мицубиси" base="" deep="запчасти" />
+    <item value="Nissan, Ниссан" base="" deep="запчасти" />
+    <item value="Opel, Опель" base="" deep="запчасти" />
+    <item value="Peugeot, Пежо" base="" deep="запчасти" />
+    <item value="Toyota, Тойота" base="" deep="запчасти" />
+    <item value="Skoda, Шкода" base="" deep="запчасти" />    
+    <item value="Subaru, Субару" base="" deep="запчасти" />    
+    <item value="Lexus, Лексус" base="" deep="запчасти" />    
+    <item value="Infinity, Инфинити" base="" deep="запчасти" />
+    <item value="Volkswagen, Фольцваген" base="" deep="запчасти" />
+ </report> 
+ 
+</reports>

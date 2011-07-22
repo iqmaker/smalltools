@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:a3="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" a3:scriptImplementation="Adobe" width="640" viewBox="0 0 640 480" height="480">
+  <!-- Created with SVG.Graph -->
+  <!-- SVG.Graph by Jason R. Coombs -->
+  <!-- Based on SVG::Graph by Sean E. Russel -->
+  <!-- Based on Perl SVG:TT:Graph by Leo Lapworth & Stephan Morgan -->
+  <!-- //////////////////////////////////////////////////////////////////-->
+  <defs>
+    <filter width="1.2" id="dropshadow" height="1.2"/>
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <style type="text/css">/*&#13;
+$Id: graph.css 81 2009-09-01 02:04:44Z jaraco $&#13;
+&#13;
+Base styles for svg.charts.Graph&#13;
+*/
+.svgBackground {
+    fill: #fff
+    }
+.graphBackground {
+    fill: #f0f0f0
+    }
+/* graphs titles */
+.mainTitle {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.subTitle {
+    text-anchor: middle;
+    fill: #999;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.axis {
+    stroke: #000;
+    stroke-width: 1px
+    }
+.guideLines {
+    stroke: #666;
+    stroke-width: 1px;
+    stroke-dasharray: 5, 5
+    }
+.xAxisLabels {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisLabels {
+    text-anchor: end;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.xAxisTitle {
+    text-anchor: middle;
+    fill: #f00;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisTitle {
+    fill: #f00;
+    text-anchor: middle;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.dataPointLabel {
+    fill: #000;
+    text-anchor: middle;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.staggerGuideLine {
+    fill: none;
+    stroke: #000;
+    stroke-width: 0.5px
+    }
+.keyText {
+    fill: #000;
+    text-anchor: start;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }</style>
+  </defs>
+  <!-- include default stylesheet if none specified -->
+  <!--SVG Background-->
+  <rect y="0" width="640" class="svgBackground" x="0" height="480"/>
+  <g transform="translate(543 30)">
+    <rect y="0" x="0" height="12" class="key1" width="12"/>
+    <text y="12" x="17" class="keyText">Internet [-2]</text>
+    <rect y="17" x="0" height="12" class="key2" width="12"/>
+    <text y="29" x="17" class="keyText">TV [5]</text>
+    <rect y="34" x="0" height="12" class="key3" width="12"/>
+    <text y="46" x="17" class="keyText">Newspaper [2]</text>
+    <rect y="51" x="0" height="12" class="key4" width="12"/>
+    <text y="63" x="17" class="keyText">Magazine [8]</text>
+    <rect y="68" x="0" height="12" class="key5" width="12"/>
+    <text y="80" x="17" class="keyText">Radio [5]</text>
+  </g>
+  <g transform="translate(104 32)">
+    <g>
+      <path filter="url(#dropshadow)" style="fill: #ccc; stroke: none" d="M215.5,215.5 L215.5,0.0 A215.5,215.5 0, 0,1, 76.9792701126 50.4174225079 Z" transform="translate(10 10)"/>
+      <path filter="url(#dropshadow)" style="fill: #ccc; stroke: none" d="M215.5,215.5 L76.9792701126,50.4174225079 A215.5,215.5 0, 0,1, 402.128474516 107.75 Z" transform="translate(10 10)"/>
+      <path filter="url(#dropshadow)" style="fill: #ccc; stroke: none" d="M215.5,215.5 L402.128474516,107.75 A215.5,215.5 0, 0,1, 427.726070774 252.921182287 Z" transform="translate(10 10)"/>
+      <path filter="url(#dropshadow)" style="fill: #ccc; stroke: none" d="M215.5,215.5 L427.726070774,252.921182287 A215.5,215.5 0, 0,1, 3.27392922587 252.921182287 Z" transform="translate(10.0 20.0)"/>
+      <path filter="url(#dropshadow)" style="fill: #ccc; stroke: none" d="M215.5,215.5 L3.27392922587,252.921182287 A215.5,215.5 0, 0,1, 215.5 0.0 Z" transform="translate(10 10)"/>
+    </g>
+    <g>
+      <path style="fill:#fff; stroke:none;" d="M215.5,215.5 L215.5,0.0 A215.5,215.5 0, 0,1, 76.9792701126 50.4174225079 Z"/>
+      <path style="fill:#fff; stroke:none;" d="M215.5,215.5 L76.9792701126,50.4174225079 A215.5,215.5 0, 0,1, 402.128474516 107.75 Z"/>
+      <path style="fill:#fff; stroke:none;" d="M215.5,215.5 L402.128474516,107.75 A215.5,215.5 0, 0,1, 427.726070774 252.921182287 Z"/>
+      <path style="fill:#fff; stroke:none;" d="M215.5,215.5 L427.726070774,252.921182287 A215.5,215.5 0, 0,1, 3.27392922587 252.921182287 Z" transform="translate(-3.21624529935e-15 10.0)"/>
+      <path style="fill:#fff; stroke:none;" d="M215.5,215.5 L3.27392922587,252.921182287 A215.5,215.5 0, 0,1, 215.5 0.0 Z"/>
+    </g>
+    <g>
+      <path d="M215.5,215.5 L215.5,0.0 A215.5,215.5 0, 0,1, 76.9792701126 50.4174225079 Z" class="fill1"/>
+      <text y="12.9962402206" x="141.794659113" style="stroke: #fff; stroke-width: 2;" class="dataPointLabel">Internet -11%</text>
+      <text y="12.9962402206" x="141.794659113" class="dataPointLabel">Internet -11%</text>
+      <path d="M215.5,215.5 L76.9792701126,50.4174225079 A215.5,215.5 0, 0,1, 402.128474516 107.75 Z" class="fill2"/>
+      <text y="3.27392922587" x="252.921182287" style="stroke: #fff; stroke-width: 2;" class="dataPointLabel">TV 28%</text>
+      <text y="3.27392922587" x="252.921182287" class="dataPointLabel">TV 28%</text>
+      <path d="M215.5,215.5 L402.128474516,107.75 A215.5,215.5 0, 0,1, 427.726070774 252.921182287 Z" class="fill3"/>
+      <text y="178.078817713" x="427.726070774" style="stroke: #fff; stroke-width: 2;" class="dataPointLabel">Newspaper 11%</text>
+      <text y="178.078817713" x="427.726070774" class="dataPointLabel">Newspaper 11%</text>
+      <path d="M215.5,215.5 L427.726070774,252.921182287 A215.5,215.5 0, 0,1, 3.27392922587 252.921182287 Z" class="fill4" transform="translate(-3.21624529935e-15 10.0)"/>
+      <text y="441.0" x="215.5" style="stroke: #fff; stroke-width: 2;" class="dataPointLabel">Magazine 44%</text>
+      <text y="441.0" x="215.5" class="dataPointLabel">Magazine 44%</text>
+      <path d="M215.5,215.5 L3.27392922587,252.921182287 A215.5,215.5 0, 0,1, 215.5 0.0 Z" class="fill5"/>
+      <text y="76.9792701126" x="50.4174225079" style="stroke: #fff; stroke-width: 2;" class="dataPointLabel">Radio 28%</text>
+      <text y="76.9792701126" x="50.4174225079" class="dataPointLabel">Radio 28%</text>
+    </g>
+  </g>
+</svg>

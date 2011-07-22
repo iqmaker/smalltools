@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:a3="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" a3:scriptImplementation="Adobe" width="500" viewBox="0 0 500 300" height="300">
+  <!-- Created with SVG.Graph -->
+  <!-- SVG.Graph by Jason R. Coombs -->
+  <!-- Based on SVG::Graph by Sean E. Russel -->
+  <!-- Based on Perl SVG:TT:Graph by Leo Lapworth & Stephan Morgan -->
+  <!-- //////////////////////////////////////////////////////////////////-->
+  <defs>
+    <style type="text/css">/*&#13;
+$Id: graph.css 81 2009-09-01 02:04:44Z jaraco $&#13;
+&#13;
+Base styles for svg.charts.Graph&#13;
+*/
+.svgBackground {
+    fill: #fff
+    }
+.graphBackground {
+    fill: #f0f0f0
+    }
+/* graphs titles */
+.mainTitle {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.subTitle {
+    text-anchor: middle;
+    fill: #999;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.axis {
+    stroke: #000;
+    stroke-width: 1px
+    }
+.guideLines {
+    stroke: #666;
+    stroke-width: 1px;
+    stroke-dasharray: 5, 5
+    }
+.xAxisLabels {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisLabels {
+    text-anchor: end;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.xAxisTitle {
+    text-anchor: middle;
+    fill: #f00;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisTitle {
+    fill: #f00;
+    text-anchor: middle;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.dataPointLabel {
+    fill: #000;
+    text-anchor: middle;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.staggerGuideLine {
+    fill: none;
+    stroke: #000;
+    stroke-width: 0.5px
+    }
+.keyText {
+    fill: #000;
+    text-anchor: start;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+/*&#13;
+$Id: plot.css 81 2009-09-01 02:04:44Z jaraco $&#13;
+&#13;
+default line styles&#13;
+*/
+.line1 {
+    fill: none;
+    stroke: #f00;
+    stroke-width: 1px
+    }
+.line2 {
+    fill: none;
+    stroke: #00f;
+    stroke-width: 1px
+    }
+.line3 {
+    fill: none;
+    stroke: #0f0;
+    stroke-width: 1px
+    }
+.line4 {
+    fill: none;
+    stroke: #fc0;
+    stroke-width: 1px
+    }
+.line5 {
+    fill: none;
+    stroke: #0cf;
+    stroke-width: 1px
+    }
+.line6 {
+    fill: none;
+    stroke: #f0f;
+    stroke-width: 1px
+    }
+.line7 {
+    fill: none;
+    stroke: #0ff;
+    stroke-width: 1px
+    }
+.line8 {
+    fill: none;
+    stroke: #ff0;
+    stroke-width: 1px
+    }
+.line9 {
+    fill: none;
+    stroke: #c66;
+    stroke-width: 1px
+    }
+.line10 {
+    fill: none;
+    stroke: #639;
+    stroke-width: 1px
+    }
+.line11 {
+    fill: none;
+    stroke: #390;
+    stroke-width: 1px
+    }
+.line12 {
+    fill: none;
+    stroke: #96F;
+    stroke-width: 1px
+    }
+/* default fill styles */
+.fill1 {
+    fill: #c00;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill2 {
+    fill: #00c;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill3 {
+    fill: #0c0;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill4 {
+    fill: #fc0;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill5 {
+    fill: #0cf;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill6 {
+    fill: #f0f;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill7 {
+    fill: #0ff;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill8 {
+    fill: #ff0;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill9 {
+    fill: #c66;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill10 {
+    fill: #639;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill11 {
+    fill: #390;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+.fill12 {
+    fill: #96F;
+    fill-opacity: 0.2;
+    stroke: none
+    }
+/* default line styles */
+.key1, .dataPoint1 {
+    fill: #f00;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key2, .dataPoint2 {
+    fill: #00f;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key3, .dataPoint3 {
+    fill: #0f0;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key4, .dataPoint4 {
+    fill: #fc0;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key5, .dataPoint5 {
+    fill: #0cf;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key6, .dataPoint6 {
+    fill: #f0f;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key7, .dataPoint7 {
+    fill: #0ff;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key8, .dataPoint8 {
+    fill: #ff0;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key9, .dataPoint9 {
+    fill: #c66;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key10, .dataPoint10 {
+    fill: #639;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key11, .dataPoint11 {
+    fill: #390;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key12, .dataPoint12 {
+    fill: #96F;
+    stroke: none;
+    stroke-width: 1px
+    }
+.constantLine {
+    color: navy;
+    stroke: navy;
+    stroke-width: 1px;
+    stroke-dasharray: 9, 1, 1
+    }</style>
+  </defs>
+  <!-- include default stylesheet if none specified -->
+  <!--SVG Background-->
+  <rect y="0" width="500" class="svgBackground" x="0" height="300"/>
+  <g transform="translate (103.4 10)">
+    <rect y="0" x="0" height="249" class="graphBackground" width="319.6"/>
+    <path id="xAxis" d="M 0 0 v249" class="axis"/>
+    <path id="yAxis" d="M 0 249 h319.6" class="axis"/>
+    <text class="xAxisLabels" x="0.0" y="264" style="text-anchor: middle">0.0</text>
+    <text class="xAxisLabels" x="31.038" y="281" style="text-anchor: middle">0.315</text>
+    <path d="M31.038000 249.000000 v17" class="staggerGuideLine"/>
+    <text class="xAxisLabels" x="62.076" y="264" style="text-anchor: middle">0.63</text>
+    <text class="xAxisLabels" x="93.114" y="281" style="text-anchor: middle">0.945</text>
+    <path d="M93.114000 249.000000 v17" class="staggerGuideLine"/>
+    <text class="xAxisLabels" x="124.152" y="264" style="text-anchor: middle">1.26</text>
+    <text class="xAxisLabels" x="155.19" y="281" style="text-anchor: middle">1.575</text>
+    <path d="M155.190000 249.000000 v17" class="staggerGuideLine"/>
+    <text class="xAxisLabels" x="186.228" y="264" style="text-anchor: middle">1.89</text>
+    <text class="xAxisLabels" x="217.266" y="281" style="text-anchor: middle">2.205</text>
+    <path d="M217.266000 249.000000 v17" class="staggerGuideLine"/>
+    <text class="xAxisLabels" x="248.304" y="264" style="text-anchor: middle">2.52</text>
+    <text class="xAxisLabels" x="279.342" y="281" style="text-anchor: middle">2.835</text>
+    <path d="M279.342000 249.000000 v17" class="staggerGuideLine"/>
+    <path d="M 31.038 0 v249" class="guideLines"/>
+    <path d="M 62.076 0 v249" class="guideLines"/>
+    <path d="M 93.114 0 v249" class="guideLines"/>
+    <path d="M 124.152 0 v249" class="guideLines"/>
+    <path d="M 155.19 0 v249" class="guideLines"/>
+    <path d="M 186.228 0 v249" class="guideLines"/>
+    <path d="M 217.266 0 v249" class="guideLines"/>
+    <path d="M 248.304 0 v249" class="guideLines"/>
+    <path d="M 279.342 0 v249" class="guideLines"/>
+    <text class="yAxisLabels" x="-3" y="253.0" style="text-anchor: end">0.0</text>
+    <text class="yAxisLabels" x="-20" y="229.375" style="text-anchor: end">4.725</text>
+    <path d="M-20.000000 235.375000 h17" class="staggerGuideLine"/>
+    <text class="yAxisLabels" x="-3" y="205.75" style="text-anchor: end">9.45</text>
+    <text class="yAxisLabels" x="-20" y="182.125" style="text-anchor: end">14.175</text>
+    <path d="M-20.000000 188.125000 h17" class="staggerGuideLine"/>
+    <text class="yAxisLabels" x="-3" y="158.5" style="text-anchor: end">18.9</text>
+    <text class="yAxisLabels" x="-20" y="134.875" style="text-anchor: end">23.625</text>
+    <path d="M-20.000000 140.875000 h17" class="staggerGuideLine"/>
+    <text class="yAxisLabels" x="-3" y="111.25" style="text-anchor: end">28.35</text>
+    <text class="yAxisLabels" x="-20" y="87.625" style="text-anchor: end">33.075</text>
+    <path d="M-20.000000 93.625000 h17" class="staggerGuideLine"/>
+    <text class="yAxisLabels" x="-3" y="64.0" style="text-anchor: end">37.8</text>
+    <text class="yAxisLabels" x="-20" y="40.375" style="text-anchor: end">42.525</text>
+    <path d="M-20.000000 46.375000 h17" class="staggerGuideLine"/>
+    <path d="M 0 225.375 h319.6" class="guideLines"/>
+    <path d="M 0 201.75 h319.6" class="guideLines"/>
+    <path d="M 0 178.125 h319.6" class="guideLines"/>
+    <path d="M 0 154.5 h319.6" class="guideLines"/>
+    <path d="M 0 130.875 h319.6" class="guideLines"/>
+    <path d="M 0 107.25 h319.6" class="guideLines"/>
+    <path d="M 0 83.625 h319.6" class="guideLines"/>
+    <path d="M 0 60.0 h319.6" class="guideLines"/>
+    <path d="M 0 36.375 h319.6" class="guideLines"/>
+    <path d="M98.533333 249.000000 L98.533333 124.000000 197.066667 99.000000 295.600000 24.000000 V249.000000 Z" class="fill1"/>
+    <path d="M98.533333 124.000000 L98.533333 124.000000 197.066667 99.000000 295.600000 24.000000" class="line1"/>
+    <circle cy="124.0" cx="98.5333333333" r="2.5" class="dataPoint1"/>
+    <circle cy="99.0" cx="197.066666667" r="2.5" class="dataPoint1"/>
+    <circle cy="24.0" cx="295.6" r="2.5" class="dataPoint1"/>
+    <path d="M98.533333 249.000000 L98.533333 99.000000 197.066667 94.000000 295.600000 49.000000 V249.000000 Z" class="fill2"/>
+    <path d="M98.533333 99.000000 L98.533333 99.000000 197.066667 94.000000 295.600000 49.000000" class="line2"/>
+    <circle cy="99.0" cx="98.5333333333" r="2.5" class="dataPoint2"/>
+    <circle cy="94.0" cx="197.066666667" r="2.5" class="dataPoint2"/>
+    <circle cy="49.0" cx="295.6" r="2.5" class="dataPoint2"/>
+    <path d="M49.266667 249.000000 L49.266667 74.000000 98.533333 149.000000 295.600000 196.500000 V249.000000 Z" class="fill3"/>
+    <path d="M49.266667 74.000000 L49.266667 74.000000 98.533333 149.000000 295.600000 196.500000" class="line3"/>
+    <circle cy="74.0" cx="49.2666666667" r="2.5" class="dataPoint3"/>
+    <circle cy="149.0" cx="98.5333333333" r="2.5" class="dataPoint3"/>
+    <circle cy="196.5" cx="295.6" r="2.5" class="dataPoint3"/>
+    <g>
+      <text style="fill: #000; text-anchor: start;" text="(1.00, 25.00)" visibility="hidden" y="112.0" x="103.533333333" id="label-(1.00, 25.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(1.00, 25.00)).setAttribute('visibility', hidden)" cy="124.0" cx="98.5333333333" onmouseover="document.getElementById(label-(1.00, 25.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="118.0" x="98.5333333333" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">25</text>
+      <text y="118.0" x="98.5333333333" class="dataPointLabel">25</text>
+      <text style="fill: #000; text-anchor: start;" text="(2.00, 30.00)" visibility="hidden" y="87.0" x="202.066666667" id="label-(2.00, 30.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(2.00, 30.00)).setAttribute('visibility', hidden)" cy="99.0" cx="197.066666667" onmouseover="document.getElementById(label-(2.00, 30.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="93.0" x="197.066666667" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">30</text>
+      <text y="93.0" x="197.066666667" class="dataPointLabel">30</text>
+      <text style="fill: #000; text-anchor: start;" text="(3.00, 45.00)" visibility="hidden" y="12.0" x="300.6" id="label-(3.00, 45.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(3.00, 45.00)).setAttribute('visibility', hidden)" cy="24.0" cx="295.6" onmouseover="document.getElementById(label-(3.00, 45.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="18.0" x="295.6" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">45</text>
+      <text y="18.0" x="295.6" class="dataPointLabel">45</text>
+      <text style="fill: #000; text-anchor: start;" text="(1.00, 30.00)" visibility="hidden" y="87.0" x="103.533333333" id="label-(1.00, 30.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(1.00, 30.00)).setAttribute('visibility', hidden)" cy="99.0" cx="98.5333333333" onmouseover="document.getElementById(label-(1.00, 30.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="93.0" x="98.5333333333" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">30</text>
+      <text y="93.0" x="98.5333333333" class="dataPointLabel">30</text>
+      <text style="fill: #000; text-anchor: start;" text="(2.00, 31.00)" visibility="hidden" y="82.0" x="202.066666667" id="label-(2.00, 31.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(2.00, 31.00)).setAttribute('visibility', hidden)" cy="94.0" cx="197.066666667" onmouseover="document.getElementById(label-(2.00, 31.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="88.0" x="197.066666667" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">31</text>
+      <text y="88.0" x="197.066666667" class="dataPointLabel">31</text>
+      <text style="fill: #000; text-anchor: start;" text="(3.00, 40.00)" visibility="hidden" y="37.0" x="300.6" id="label-(3.00, 40.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(3.00, 40.00)).setAttribute('visibility', hidden)" cy="49.0" cx="295.6" onmouseover="document.getElementById(label-(3.00, 40.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="43.0" x="295.6" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">40</text>
+      <text y="43.0" x="295.6" class="dataPointLabel">40</text>
+      <text style="fill: #000; text-anchor: start;" text="(0.50, 35.00)" visibility="hidden" y="62.0" x="54.2666666667" id="label-(0.50, 35.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(0.50, 35.00)).setAttribute('visibility', hidden)" cy="74.0" cx="49.2666666667" onmouseover="document.getElementById(label-(0.50, 35.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="68.0" x="49.2666666667" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">35</text>
+      <text y="68.0" x="49.2666666667" class="dataPointLabel">35</text>
+      <text style="fill: #000; text-anchor: start;" text="(1.00, 20.00)" visibility="hidden" y="137.0" x="103.533333333" id="label-(1.00, 20.00)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(1.00, 20.00)).setAttribute('visibility', hidden)" cy="149.0" cx="98.5333333333" onmouseover="document.getElementById(label-(1.00, 20.00)).setAttribute('visibility', visible)" r="10"/>
+      <text y="143.0" x="98.5333333333" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">20</text>
+      <text y="143.0" x="98.5333333333" class="dataPointLabel">20</text>
+      <text style="fill: #000; text-anchor: start;" text="(3.00, 10.50)" visibility="hidden" y="184.5" x="300.6" id="label-(3.00, 10.50)"/>
+      <circle style="opacity: 0;" onmouseout="document.getElementById(label-(3.00, 10.50)).setAttribute('visibility', hidden)" cy="196.5" cx="295.6" onmouseover="document.getElementById(label-(3.00, 10.50)).setAttribute('visibility', visible)" r="10"/>
+      <text y="190.5" x="295.6" style="None stroke: #fff; stroke-width: 2;" class="dataPointLabel">10.5</text>
+      <text y="190.5" x="295.6" class="dataPointLabel">10.5</text>
+    </g>
+  </g>
+  <g transform="translate(433 30)">
+    <rect y="0" x="0" height="12" class="key1" width="12"/>
+    <text y="12" x="17" class="keyText">series 1</text>
+    <rect y="17" x="0" height="12" class="key2" width="12"/>
+    <text y="29" x="17" class="keyText">series 2</text>
+    <rect y="34" x="0" height="12" class="key3" width="12"/>
+    <text y="46" x="17" class="keyText">series 3</text>
+  </g>
+</svg>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<reports>
+
+<report id="mazda3body" title="Распространенность модели кузова Мазда 3" type="pie" >
+    <item first="мазда 3 хэтчбек" label="Хэтчбек" />
+    <item first="мазда 3 седан"  label="Седан" />
+</report>
+
+<report id="mazda3concur" title="Мазда 3 в ряду основных конкурентов" type="barchart" annotate="part" sorted="true" >
+    <item first="мазда, mazda" second="3"  label="Мазда 3" />
+    <item first="шкода, skoda" second="фабия, фабиа, fabia"   label="Шкода фабия" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="лансер, lancer"   label="Митсубиси лансер" />
+    <item first="форд, ford"  second="фокус, focus"  label="Форд фокус" /> 
+    <item first="Honda, Хонда"  second="цивик, civic"   label="Хонда сивик" />
+    <item first="audi, ауди"  second="а4"   label="Ауди а4" /> 
+    <item first="bmw, бмв"  second="318, 320, 325"   label="БМВ 3" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="lacetti, лачети, лаччети, лачетти"   label="Шевроле лачетти" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="elantra, элантра"   label="Хундай элантра" />
+    
+    <item first="Nissan, Ниссан, Нисан"  second="almera, альмера"   label="Ниссан альмера" />
+    <item first="Nissan, Ниссан, Нисан"  second="тиида, tiida"   label="Ниссан тиида" />
+    
+    <item first="Опель, Opel"  second="астра, astra"   label="Опель астра" />
+    <item first="Опель, Opel"  second="corsa, корса"   label="Опель корса" />
+    
+    <item first="Рено, Renault"  second="лагуна, laguna"   label="Рено лагуна" />
+    <item first="Рено, Renault"  second="megane, меган"   label="Рено меган" />
+    
+    <item first="Citroen, Ситроен"  second="c4"   label="Ситроен с4" />
+
+    <item first="Toyota, Тойота"  second="авенсис, avensis"   label="Тойота авенсис" />
+    <item first="Toyota, Тойота"  second="celica, селика"   label="Тойота селика" />
+    <item first="Toyota, Тойота"  second="королла, corolla"   label="Тойота королла" />
+    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Гольф, Golf"   label="Фольксваген гольф" /> 
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Jetta, Джетта"   label="Фольксваген джетта" />     
+</report>
+
+<report id="mazda6body" title="Популярность Мазда 6 и ее конкурентов" sorted="true" type="barchart" annotate="absolute" >
+    <item first="мазда, mazda" second="6"  label="Мазда 6" />
+    <item first="шкода, skoda" second="octavia, октавия, октавиа"   label="Шкода октавия" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="galant, галант"   label="Митсубиси галант" />
+    <item first="форд, ford"  second="mondeo, мондео"  label="Форд мондео" /> 
+    <item first="Honda, Хонда"  second="аккорд, accord, акорд"   label="Хонда аккорд" />  
+    <item first="audi, ауди"  second="а6"   label="Ауди а6" />   
+    <item first="HYUNDAI, Хундай, Хендай"  second="sonata, соната"   label="Хундай соната" />
+    <item first="Nissan, Ниссан, Нисан"  second="теана, teana, тиана"   label="Ниссан теана" />
+    <item first="Рено, Renault"  second="megane, меган"   label="Рено меган" />
+    <item first="Toyota, Тойота"  second="camry, камри"   label="Тойота камри" />
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Passat, Пассат"   label="Фольксваген пассат" />    
+</report>
+
+<report id="mitsupop" title="Популярность моделей митсубиси в России" type="pie" >
+    <item first="Митсубиси" second="лансер, lancer"   label="Лансер" />
+    <item first="Митсубиси" second="colt, кольт"   label="Кольт" />
+    <item first="Митсубиси" second="outlander, outlender, оутландер, аутландер, оутлендер"   label="Оутлендер" />
+    <item first="Митсубиси" second="каризма, carisma"   label="Каризма" />
+    <item first="Митсубиси" second="galant, галант"   label="Галант" />
+    <item first="Митсубиси" second="pajero, паджеро"   label="Паджеро" />
+    <item first="Митсубиси" second="L200, L 200"   label="L200" />
+</report>
+
+<report id="models" title="Популярность модели автомобиля" type="barchart" sorted="true" >
+    <item first="мазда, mazda" second="3"  label="Мазда 3" />
+    <item first="мазда, mazda" second="6"  label="Мазда 6" />
+    <item first="мазда, mazda" second="626"  label="Мазда 626" />
+    <item first="мазда, mazda" second="323"  label="Мазда 323" />
+    <item first="мазда, mazda" second="CX"   label="Мазда CX" />
+    
+    <item first="шкода, skoda" second="octavia, октавия, октавиа"   label="Шкода октавия" />
+    <item first="шкода, skoda" second="фабия, фабиа, fabia"   label="Шкода фабия" />
+    
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="лансер, lancer"   label="Митсубиси лансер" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="colt, кольт"   label="Митсубиси кольт" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="outlander, outlender, оутландер, аутландер, оутлендер"   label="Митсубиси оутландер" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="каризма, carisma"   label="Митсубиси каризма" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="galant, галант"   label="Митсубиси галант" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="pajero, паджеро"   label="Митсубиси паджеро" />
+    
+    <item first="форд, ford"  second="фокус, focus"  label="Форд фокус" />
+    <item first="форд, ford"  second="mondeo, мондео"  label="Форд мондео" />
+    <item first="форд, ford"  second="симакс, си макс, c-max, cmax"  label="Форд c-max" />
+    <item first="форд, ford"  second="fusion, фьюжн, фьюжин, фюжин"  label="Форд фьюжин" />
+    
+    <item first="Honda, Хонда"  second="аккорд, accord, акорд"   label="Хонда аккорд" />
+    <item first="Honda, Хонда"  second="цивик, civic"   label="Хонда сивик" />
+    <item first="Honda, Хонда"  second="легенд, legend"   label="Хонда легенд" />
+    <item first="Honda, Хонда"  second="cr-v, crv"   label="Хонда C-RV" />
+    <item first="Honda, Хонда"  second="hr-v, hrv"   label="Хонда H-RV" />
+    
+    <item first="audi, ауди"  second="а4"   label="Ауди а4" />
+    <item first="audi, ауди"  second="а6"   label="Ауди а6" />
+    <item first="audi, ауди"  second="а8"   label="Ауди а8" />
+    <item first="audi, ауди"  second="q7"   label="Ауди q7" />
+    
+    <item first="bmw, бмв"  second="318"   label="БМВ 318" />
+    <item first="bmw, бмв"  second="320"   label="БМВ 320" />
+    <item first="bmw, бмв"  second="325"   label="БМВ 325" />
+    <item first="bmw, бмв"  second="525"   label="БМВ 525" />
+    <item first="bmw, бмв"  second="530"   label="БМВ 530" />
+    <item first="bmw, бмв"  second="x3"   label="БМВ x3" />
+    <item first="bmw, бмв"  second="x5"   label="БМВ x5" />
+    <item first="bmw, бмв"  second="x6"   label="БМВ x6" />
+    
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="aveo, авео"   label="Шевроле авео" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="captiva, каптива"   label="Шевроле каптива" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="lacetti, лачети, лаччети, лачетти"   label="Шевроле лачетти" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="ланос, lanos"   label="Шевроле ланос" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="fiesta, фиеста"   label="Шевроле фиеста " />
+    
+    <item first="HYUNDAI, Хундай, Хендай"  second="accent, акцент"   label="Хундай акцент" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="elantra, элантра"   label="Хундай элантра" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="getz, гетц, гетс"   label="Хундай гетц" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="santafe, santa-fe, сантафе"   label="Хундай сантафе" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="sonata, соната"   label="Хундай соната" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="tucson, таксан, туксон, таксон"   label="Хундай tucson" />
+    
+    <item first="Nissan, Ниссан, Нисан"  second="almera, альмера"   label="Ниссан альмера" />
+    <item first="Nissan, Ниссан, Нисан"  second="максима, maxima"   label="Ниссан максима" />
+    <item first="Nissan, Ниссан, Нисан"  second="micra, микра"   label="Ниссан микра" />
+    <item first="Nissan, Ниссан, Нисан"  second="мурано, murano"   label="Ниссан мурано" />
+    <item first="Nissan, Ниссан, Нисан"  second="note, ноут"   label="Ниссан ноут" />
+    <item first="Nissan, Ниссан, Нисан"  second="pathfinder, патфайндер"   label="Ниссан патфайндер" />
+    <item first="Nissan, Ниссан, Нисан"  second="патрол, patrol"   label="Ниссан патрол" />
+    <item first="Nissan, Ниссан, Нисан"  second="primera, примера"   label="Ниссан примера" />
+    <item first="Nissan, Ниссан, Нисан"  second="qashqai, кашкай, кошкай"   label="Ниссан кашкай" />
+    <item first="Nissan, Ниссан, Нисан"  second="теана, teana, тиана"   label="Ниссан теана" />
+    <item first="Nissan, Ниссан, Нисан"  second="тиида, tiida"   label="Ниссан тиида" />
+    <item first="Nissan, Ниссан, Нисан"  second="x-trail, икстреил, икстраил"   label="Ниссан икстреил" />
+    
+    <item first="Опель, Opel"  second="астра, astra"   label="Опель астра" />
+    <item first="Опель, Opel"  second="corsa, корса"   label="Опель корса" />
+    <item first="Опель, Opel"  second="омега, omega"   label="Опель омега" />
+    <item first="Опель, Opel"  second="vectra, вектра"   label="Опель вектра" />
+    <item first="Опель, Opel"  second="zafira, зафира, зефира"   label="Опель зафира" />
+    
+    <item first="Рено, Renault"  second="лагуна, laguna"   label="Рено лагуна" />
+    <item first="Рено, Renault"  second="logan, логан"   label="Рено логан" />
+    <item first="Рено, Renault"  second="megane, меган"   label="Рено меган" />
+    <item first="Рено, Renault"  second="scenic, сценик"   label="Рено сценик" />
+    <item first="Рено, Renault"  second="symbol, симбол, символ"   label="Рено симбол" />
+    
+    <item first="Toyota, Тойота"  second="auris, аурис"   label="Тойота аурис" />
+    <item first="Toyota, Тойота"  second="авенсис, avensis"   label="Тойота авенсис" />
+    <item first="Toyota, Тойота"  second="camry, камри"   label="Тойота камри" />
+    <item first="Toyota, Тойота"  second="карина, carina"   label="Тойота карина" />
+    <item first="Toyota, Тойота"  second="celica, селика"   label="Тойота селика" />
+    <item first="Toyota, Тойота"  second="королла, corolla"   label="Тойота королла" />
+    <item first="Toyota, Тойота"  second="highlander, хайлендер"   label="Тойота хайлендер" />
+    <item first="Toyota, Тойота"  second="land cruiser, ленд крузер, ланд круизер"   label="Тойота Land Cruiser" />
+    <item first="Toyota, Тойота"  second="марк, mark"   label="Тойота марк" />
+    <item first="Toyota, Тойота"  second="prius, приус"   label="Тойота приус" />
+    <item first="Toyota, Тойота"  second="raw 4, рав 4"   label="Тойота рав 4" />
+    <item first="Toyota, Тойота"  second="yaris, ярис"   label="Тойота ярис" />
+    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Гольф, Golf"   label="Фольксваген гольф" />    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Passat, Пассат"   label="Фольксваген пассат" />    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Туарег, Touareg"   label="Фольксваген туарег" />  
+
+    <item first="Mercedes, Мерседес"  second="190"   label="Мерседес 190" />    
+    <item first="Mercedes, Мерседес"  second="230"   label="Мерседес 230" />    
+    <item first="Mercedes, Мерседес"  second="c180"   label="Мерседес c180" />    
+    <item first="Mercedes, Мерседес"  second="c200"   label="Мерседес c200" />    
+    <item first="Mercedes, Мерседес"  second="c220"   label="Мерседес c220" />    
+    <item first="Mercedes, Мерседес"  second="c230"   label="Мерседес c230" />    
+    <item first="Mercedes, Мерседес"  second="cl500"   label="Мерседес cl500" />    
+    <item first="Mercedes, Мерседес"  second="e200"   label="Мерседес e200" />    
+    <item first="Mercedes, Мерседес"  second="e220"   label="Мерседес e220" />    
+    <item first="Mercedes, Мерседес"  second="e230"   label="Мерседес e230" />    
+    <item first="Mercedes, Мерседес"  second="e240"   label="Мерседес e240" />    
+    <item first="Mercedes, Мерседес"  second="e280"   label="Мерседес e280" />    
+    <item first="Mercedes, Мерседес"  second="e320"   label="Мерседес e320" />    
+    <item first="Mercedes, Мерседес"  second="g500"   label="Мерседес g500" />    
+    <item first="Mercedes, Мерседес"  second="gl320"   label="Мерседес gl320" />    
+    <item first="Mercedes, Мерседес"  second="ml320"   label="Мерседес ml320" />    
+    <item first="Mercedes, Мерседес"  second="ml350"   label="Мерседес ml350" />    
+    <item first="Mercedes, Мерседес"  second="s500"   label="Мерседес s500" />    
+    <item first="Mercedes, Мерседес"  second="s600"   label="Мерседес s600" />    
+    <item first="Mercedes, Мерседес"  second="viano"   label="Мерседес viano" />   
+</report>
+
+<report id="mrazbor_by_models" title="Популярность модели автомобиля" type="barchart" annotate="part" sorted="true" >
+    <item first="мазда, mazda" second="6"  third="разборка, запчасти бу, разбор, развал" label="Мазда 6" />
+    <item first="мазда, mazda" second="3"  third="разборка, запчасти бу, разбор, развал" label="Мазда 3" />
+    <item first="мазда, mazda" second="323"  third="разборка, запчасти бу, разбор, развал" label="Мазда 323" />
+    <item first="мазда, mazda" second="626"  third="разборка, запчасти бу, разбор, развал" label="Мазда 626" />
+    <item first="мазда, mazda" second="CX"  third="разборка, запчасти бу, разбор, развал" label="Мазда CX" />
+    <item first="мазда, mazda" second="RX"  third="разборка, запчасти бу, разбор, развал" label="Мазда RX" />
+</report>
+
+<report id="razbor_by_model" title="Востребованность разборок по моделям" type="barchart" annotate="absolute" sorted="true" >
+    <item first="мазда, mazda" second="3" third="разборка" label="Мазда 3" />
+    <item first="мазда, mazda" second="6" third="разборка" label="Мазда 6" />
+    <item first="мазда, mazda" second="626" third="разборка" label="Мазда 626" />
+    <item first="мазда, mazda" second="323" third="разборка" label="Мазда 323" />
+    <item first="мазда, mazda" second="CX"  third="разборка" label="Мазда CX" />
+    
+    <item first="шкода, skoda" second="octavia, октавия, октавиа"  third="разборка" label="Шкода октавия" />
+    <item first="шкода, skoda" second="фабия, фабиа, fabia"  third="разборка" label="Шкода фабия" />
+    
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="лансер, lancer"  third="разборка" label="Митсубиси лансер" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="colt, кольт"  third="разборка" label="Митсубиси кольт" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="outlander, outlender, оутландер, аутландер, оутлендер"  third="разборка" label="Митсубиси оутландер" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="каризма, carisma"  third="разборка" label="Митсубиси каризма" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="galant, галант"  third="разборка" label="Митсубиси галант" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" second="pajero, паджеро"  third="разборка" label="Митсубиси паджеро" />
+    
+    <item first="форд, ford"  second="фокус, focus" third="разборка" label="Форд фокус" />
+    <item first="форд, ford"  second="mondeo, мондео" third="разборка" label="Форд мондео" />
+    <item first="форд, ford"  second="симакс, си макс, c-max, cmax" third="разборка" label="Форд c-max" />
+    <item first="форд, ford"  second="fusion, фьюжн, фьюжин, фюжин" third="разборка" label="Форд фьюжин" />
+    
+    <item first="Honda, Хонда"  second="аккорд, accord, акорд"  third="разборка" label="Хонда аккорд" />
+    <item first="Honda, Хонда"  second="цивик, civic"  third="разборка" label="Хонда сивик" />
+    <item first="Honda, Хонда"  second="легенд, legend"  third="разборка" label="Хонда легенд" />
+    <item first="Honda, Хонда"  second="cr-v, crv"  third="разборка" label="Хонда C-RV" />
+    <item first="Honda, Хонда"  second="hr-v, hrv"  third="разборка" label="Хонда H-RV" />
+    
+    <item first="audi, ауди"  second="а4"  third="разборка" label="Ауди а4" />
+    <item first="audi, ауди"  second="а6"  third="разборка" label="Ауди а6" />
+    <item first="audi, ауди"  second="а8"  third="разборка" label="Ауди а8" />
+    <item first="audi, ауди"  second="q7"  third="разборка" label="Ауди q7" />
+    
+    <item first="bmw, бмв"  second="318"  third="разборка" label="БМВ 318" />
+    <item first="bmw, бмв"  second="320"  third="разборка" label="БМВ 320" />
+    <item first="bmw, бмв"  second="325"  third="разборка" label="БМВ 325" />
+    <item first="bmw, бмв"  second="525"  third="разборка" label="БМВ 525" />
+    <item first="bmw, бмв"  second="530"  third="разборка" label="БМВ 530" />
+    <item first="bmw, бмв"  second="x3"  third="разборка" label="БМВ x3" />
+    <item first="bmw, бмв"  second="x5"  third="разборка" label="БМВ x5" />
+    <item first="bmw, бмв"  second="x6"  third="разборка" label="БМВ x6" />
+    
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="aveo, авео"  third="разборка" label="Шевроле авео" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="captiva, каптива"  third="разборка" label="Шевроле каптива" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="lacetti, лачети, лаччети, лачетти"  third="разборка" label="Шевроле лачетти" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="ланос, lanos"  third="разборка" label="Шевроле ланос" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="fiesta, фиеста"  third="разборка" label="Шевроле фиеста " />
+    
+    <item first="HYUNDAI, Хундай, Хендай"  second="accent, акцент"  third="разборка" label="Хундай акцент" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="elantra, элантра"  third="разборка" label="Хундай элантра" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="getz, гетц, гетс"  third="разборка" label="Хундай гетц" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="santafe, santa-fe, сантафе"  third="разборка" label="Хундай сантафе" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="sonata, соната"  third="разборка" label="Хундай соната" />
+    <item first="HYUNDAI, Хундай, Хендай"  second="tucson, таксан, туксон, таксон"  third="разборка" label="Хундай tucson" />
+    
+    <item first="Nissan, Ниссан, Нисан"  second="almera, альмера"  third="разборка" label="Ниссан альмера" />
+    <item first="Nissan, Ниссан, Нисан"  second="максима, maxima"  third="разборка" label="Ниссан максима" />
+    <item first="Nissan, Ниссан, Нисан"  second="micra, микра"  third="разборка" label="Ниссан микра" />
+    <item first="Nissan, Ниссан, Нисан"  second="мурано, murano"  third="разборка" label="Ниссан мурано" />
+    <item first="Nissan, Ниссан, Нисан"  second="note, ноут"  third="разборка" label="Ниссан ноут" />
+    <item first="Nissan, Ниссан, Нисан"  second="pathfinder, патфайндер"  third="разборка" label="Ниссан патфайндер" />
+    <item first="Nissan, Ниссан, Нисан"  second="патрол, patrol"  third="разборка" label="Ниссан патрол" />
+    <item first="Nissan, Ниссан, Нисан"  second="primera, примера"  third="разборка" label="Ниссан примера" />
+    <item first="Nissan, Ниссан, Нисан"  second="qashqai, кашкай, кошкай"  third="разборка" label="Ниссан кашкай" />
+    <item first="Nissan, Ниссан, Нисан"  second="теана, teana, тиана"  third="разборка" label="Ниссан теана" />
+    <item first="Nissan, Ниссан, Нисан"  second="тиида, tiida"  third="разборка" label="Ниссан тиида" />
+    <item first="Nissan, Ниссан, Нисан"  second="x-trail, икстреил, икстраил"  third="разборка" label="Ниссан икстреил" />
+    
+    <item first="Опель, Opel"  second="астра, astra"  third="разборка" label="Опель астра" />
+    <item first="Опель, Opel"  second="corsa, корса"  third="разборка" label="Опель корса" />
+    <item first="Опель, Opel"  second="омега, omega"  third="разборка" label="Опель омега" />
+    <item first="Опель, Opel"  second="vectra, вектра"  third="разборка" label="Опель вектра" />
+    <item first="Опель, Opel"  second="zafira, зафира, зефира"  third="разборка" label="Опель зафира" />
+    
+    <item first="Рено, Renault"  second="лагуна, laguna"  third="разборка" label="Рено лагуна" />
+    <item first="Рено, Renault"  second="logan, логан"  third="разборка" label="Рено логан" />
+    <item first="Рено, Renault"  second="megane, меган"  third="разборка" label="Рено меган" />
+    <item first="Рено, Renault"  second="scenic, сценик"  third="разборка" label="Рено сценик" />
+    <item first="Рено, Renault"  second="symbol, симбол, символ"  third="разборка" label="Рено симбол" />
+    
+    <item first="Toyota, Тойота"  second="auris, аурис"  third="разборка" label="Тойота аурис" />
+    <item first="Toyota, Тойота"  second="авенсис, avensis"  third="разборка" label="Тойота авенсис" />
+    <item first="Toyota, Тойота"  second="camry, камри"  third="разборка" label="Тойота камри" />
+    <item first="Toyota, Тойота"  second="карина, carina"  third="разборка" label="Тойота карина" />
+    <item first="Toyota, Тойота"  second="celica, селика"  third="разборка" label="Тойота селика" />
+    <item first="Toyota, Тойота"  second="королла, corolla"  third="разборка" label="Тойота королла" />
+    <item first="Toyota, Тойота"  second="highlander, хайлендер"  third="разборка" label="Тойота хайлендер" />
+    <item first="Toyota, Тойота"  second="land cruiser, ленд крузер, ланд круизер"  third="разборка" label="Тойота Land Cruiser" />
+    <item first="Toyota, Тойота"  second="марк, mark"  third="разборка" label="Тойота марк" />
+    <item first="Toyota, Тойота"  second="prius, приус"  third="разборка" label="Тойота приус" />
+    <item first="Toyota, Тойота"  second="raw 4, рав 4"  third="разборка" label="Тойота рав 4" />
+    <item first="Toyota, Тойота"  second="yaris, ярис"  third="разборка" label="Тойота ярис" />
+    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Гольф, Golf"  third="разборка" label="Фольксваген гольф" />    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Passat, Пассат"  third="разборка" label="Фольксваген пассат" />    
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="Туарег, Touareg"  third="разборка" label="Фольксваген туарег" />  
+
+    <item first="Mercedes, Мерседес"  second="190"  third="разборка" label="Мерседес 190" />    
+    <item first="Mercedes, Мерседес"  second="230"  third="разборка" label="Мерседес 230" />    
+    <item first="Mercedes, Мерседес"  second="c180"  third="разборка" label="Мерседес c180" />    
+    <item first="Mercedes, Мерседес"  second="c200"  third="разборка" label="Мерседес c200" />    
+    <item first="Mercedes, Мерседес"  second="c220"  third="разборка" label="Мерседес c220" />    
+    <item first="Mercedes, Мерседес"  second="c230"  third="разборка" label="Мерседес c230" />    
+    <item first="Mercedes, Мерседес"  second="cl500"  third="разборка" label="Мерседес cl500" />    
+    <item first="Mercedes, Мерседес"  second="e200"  third="разборка" label="Мерседес e200" />    
+    <item first="Mercedes, Мерседес"  second="e220"  third="разборка" label="Мерседес e220" />    
+    <item first="Mercedes, Мерседес"  second="e230"  third="разборка" label="Мерседес e230" />    
+    <item first="Mercedes, Мерседес"  second="e240"  third="разборка" label="Мерседес e240" />    
+    <item first="Mercedes, Мерседес"  second="e280"  third="разборка" label="Мерседес e280" />    
+    <item first="Mercedes, Мерседес"  second="e320"  third="разборка" label="Мерседес e320" />    
+    <item first="Mercedes, Мерседес"  second="g500"  third="разборка" label="Мерседес g500" />    
+    <item first="Mercedes, Мерседес"  second="gl320"  third="разборка" label="Мерседес gl320" />    
+    <item first="Mercedes, Мерседес"  second="ml320"  third="разборка" label="Мерседес ml320" />    
+    <item first="Mercedes, Мерседес"  second="ml350"  third="разборка" label="Мерседес ml350" />    
+    <item first="Mercedes, Мерседес"  second="s500"  third="разборка" label="Мерседес s500" />    
+    <item first="Mercedes, Мерседес"  second="s600"  third="разборка" label="Мерседес s600" />    
+    <item first="Mercedes, Мерседес"  second="viano"  third="разборка" label="Мерседес viano" />    
+  
+</report>
+
+<report id="car_service_per_car" title="Спрос на сервисы по маркам на единицу" type="barchart" sorted="true" annotate="absolute">
+    <item first="Ford, Форд" base="Форд замена масла, Ford замена масла" second="ремонт" label="Ford" />
+    <item first="Audi, Ауди" base="Ауди замена масла, Audi замена масла" second="ремонт" label="Audi" />
+    <item first="BMW, БМВ" base="БМВ замена масла, BMW замена масла" second="ремонт" label="BMW" />
+    <item first="CHEVROLET, Шевроле, Шевролет" base="CHEVROLET замена масла, Шевроле замена масла, Шевролет замена масла" second="ремонт" label="Chevrolet" />
+    <item first="Honda, Хонда" base="Honda замена масла, Хонда замена масла" second="ремонт" label="Honda" />
+    <item first="HYUNDAI, Хундай, Хендай" base="HYUNDAI замена масла, Хундай замена масла, Хендай замена масла" second="ремонт" label="Hyundai" />
+    <item first="Kia, Киа" base="Kia замена масла, Киа замена масла" second="ремонт" label="Kia" />
+    <item first="Mazda, Мазда" base="Mazda замена масла, Мазда замена масла" second="ремонт" label="Mazda" />
+    <item first="Mercedes, Мерседес" base="Mercedes замена масла, Мерседес замена масла" second="ремонт" label="Mercedes" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши" base="Mitsubishi замена масла, Мицубиси замена масла, Митсубиси замена масла, митсубиши замена масла" second="ремонт" label="Mitsubishi" />
+    <item first="Nissan, Ниссан, Нисан" base="Nissan замена масла, Ниссан замена масла, Нисан замена масла" second="ремонт" label="Nissan" />
+    <item first="Opel, Опель" base="Opel замена масла, Опель замена масла" second="ремонт" label="Opel" />
+    <item first="Peugeot, Пежо" base="Peugeot замена масла, Пежо замена масла" second="ремонт" label="Peugeot" />
+    <item first="Toyota, Тойота" base="Toyota замена масла, Тойота замена масла" second="ремонт" label="Toyota" />
+    <item first="Skoda, Шкода" base="Skoda замена масла, Шкода замена масла" second="ремонт" label="Skoda" />    
+    <item first="Subaru, Субару" base="Subaru замена масла, Субару замена масла" second="ремонт" label="Subaru" />    
+    <item first="Lexus, Лексус" base="Lexus замена масла, Лексус замена масла" second="ремонт" label="Lexus" />    
+    <item first="Рено, Renault" base="Рено замена масла, Renault замена масла" second="ремонт" label="Renault" />
+    <item first="Volkswagen, Фольцваген, Фольксваген" base="Volkswagen замена масла, Фольцваген замена масла, Фольксваген замена масла" second="ремонт" label="Volkswagen" />
+</report>
+
+<report id="car_service" title="Спрос на сервисы по маркам" type="barchart" sorted="true">
+    <item first="Ford, Форд"  second="автосервис, СТО" label="Ford" />
+    <item first="Audi, Ауди"  second="автосервис, СТО" label="Audi" />
+    <item first="BMW, БМВ"  second="автосервис, СТО" label="BMW" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="автосервис, СТО" label="Chevrolet" />
+    <item first="Honda, Хонда"  second="автосервис, СТО" label="Honda" />
+    <item first="HYUNDAI, Хундай"  second="автосервис, СТО" label="Hyundai" />
+    <item first="Kia, Киа"  second="автосервис, СТО" label="Kia" />
+    <item first="Mazda, Мазда"  second="автосервис, СТО" label="Mazda" />
+    <item first="Mercedes, Мерседес"  second="автосервис, СТО" label="Mercedes" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши"  second="автосервис, СТО" label="Mitsubishi" />
+    <item first="Nissan, Ниссан, Нисан"  second="автосервис, СТО" label="Nissan" />
+    <item first="Opel, Опель"  second="автосервис, СТО" label="Opel" />
+    <item first="Peugeot, Пежо"  second="автосервис, СТО" label="Peugeot" />
+    <item first="Toyota, Тойота"  second="автосервис, СТО" label="Toyota" />
+    <item first="Skoda, Шкода"  second="автосервис, СТО" label="Skoda" />    
+    <item first="Subaru, Субару"  second="автосервис, СТО" label="Subaru" />    
+    <item first="Lexus, Лексус"  second="автосервис, СТО" label="Lexus" />    
+    <item first="Infinity, Инфинити"  second="автосервис, СТО" label="Infinity" />
+    <item first="Рено, Renault"  second="автосервис" label="Renault" />
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="автосервис, СТО" label="Volkswagen" />
+</report>
+
+
+<report id="male_female" title="Мужчина женщина" type="barchart" >
+    <item first="Мужчина"  second="" label="Мужчина" />
+    <item first="Женщина"  second="" label="Женщина" />
+    <item first="Гей"  second="" label="Гей" />
+    <item first="Лесбиянка, Лезбиянка"  second="" label="Лесбиянка" />
+</report>
+
+<report id="strakh" title="Популярность главных страховых компаний" type="pie" >
+    <item first="Ингосстрах"  second="" />
+    <item first="Согаз"  second="" />
+    <item first="Росгосстрах"  second="" />
+    <item first="Уралсиб страховние, Уралсиб страховая"  second="" label="Уралсиб"/>
+    <item first="Ресо"  second="" label="Ресо"/>
+    <item first="Росстрах, Рострах"  second="" label="Росстрах"/>
+    <item first="Ренессанс страхование, Реннис, Ренесанс страхование"  second="" label="Ренесанс"/>
+    <item first="Гута страхование"  second="" label="Гута" />
+    <item first="Альфстрахование, Альфстраховая, Альфа страхование, Альфа страховая"  second="" label="Альфа" />
+</report>
+
+<report id="kasko" title="Распределение Каско по страховым компаниям" type="pie" >
+    <item first="Ингосстрах"  second="каско" />
+    <item first="Согаз"  second="каско" />
+    <item first="Росгосстрах"  second="каско" />
+    <item first="Уралсиб страховние, Уралсиб страховая"  second="каско" label="Уралсиб"/>
+    <item first="Ресо"  second="каско" label="Ресо"/>
+    <item first="Росстрах, Рострах"  second="каско" label="Росстрах"/>
+    <item first="Ренессанс страхование, Реннис, Ренесанс страхование"  second="каско" label="Ренесанс"/>
+    <item first="Гута страхование"  second="каско" label="Гута" />
+    <item first="Альфстрахование, Альфстраховая, Альфа страхование, Альфа страховая"  second="каско" label="Альфа" />
+</report>
+
+<report id="gvsya" title="Google vs Yandex" type="pie" >
+    <item first="Google, Гугл"  second="" label="Google" />
+    <item first="Yandex, Яндекс"  second="" label="Yandex" />
+    <item first="Rambler, Рамблер"  second="" label="Rambler" />
+    <item first="Aport, Апорт"  second="" label="Aport" />
+    <item first="Bingo"  second="" label="Bingo" />
+    <item first="Yahoo"  second="" label="Yahoo" />
+</report>
+
+<report id="razbor_mazda" title="Распределение спроса разборок Мазда" type="pie" >
+    <item first="Мазда 6, Mazda 6"  second="разборка, запчасти бу, разбор" label="Мазда 6" />
+    <item first="Мазда 3, Mazda 3"  second="разборка, запчасти бу, разбор" label="Мазда 3" />
+    <item first="Мазда 323, Mazda 323"  second="разборка, запчасти бу, разбор" label="Мазда 323" />
+    <item first="Мазда 626, Mazda 626"  second="разборка, запчасти бу, разбор" label="Мазда 626" />
+    <item first="Мазда CX, Mazda CX"  second="разборка, запчасти бу, разбор" label="Мазда CX" />
+</report>
+
+<report id="PieTest" title="Доля пиццы по округам СЗАО" type="pie" sorted="true" >
+    <item first="доставка пиццы митино"  second="" label="митино" />
+    <item first="доставка пиццы тушино"  second="" label="тушино" />
+    <item first="доставка пиццы строгино"  second="" label="строгино" />
+    <item first="доставка пиццы"  second="мневники, щукино" label="мневники" />
+    <item first="доставка пиццы покровское стрешнево"  second="" label="покровское стрешнево" />
+</report>
+
+<report id="Peredelka" title="Рейтинг телепередач" type="pie" sorted="true" >
+    <item first="Квартирный вопрос, Переделка"  second="" label="Переделка"/>
+    <item first="Дачный ответ"  second="" />
+    <item first="Фазенда"  second="" />
+</report>
+
+<report id="Games" title="Игры" type="pie" sorted="true" >
+    <item first="counter strike source скачать"  second="" />
+    <item first="игра балда скачать бесплатно"  second="" />
+    <item first="мафия 2 бесплатно скачать"  second="" />
+</report>
+
+<report id="focus_vs_astra" title="Спрос запчасти на 1 машину" type="barchart" sorted="true" >
+    <item first="форд фокус" base="ford focus купить, форд фокус купить" second="запчасти, разборка, разбор, запчасти бу" />
+    <item first="опель астра" base="опель астра купить, opel astra купить" second="запчасти, разборка, разбор, запчасти бу" />
+    <item first="мазда 3" base="мазда 3 купить, mazda 3 купить" second="запчасти, разборка, разбор, запчасти бу" />
+ </report>
+ 
+<report id="models" title="Спрос на автомобили по маркам" type="barchart" sorted="true" >
+    <item first="mazda 3"  second="купить" />
+    <item first="ford focus"  second="купить" />
+    <item first="opel astra"  second="купить" />
+    <item first="toyota camry"  second="купить" />
+ </report>
+ 
+<report id="buy_auto" title="Спрос на иномарки" type="barchart" sorted="true" >
+    <item first="Ford, Форд"  second="купить" label="Ford" />
+    <item first="Audi, Ауди"  second="купить" label="Audi" />
+    <item first="BMW, БМВ"  second="купить" label="BMW" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="купить" label="Chevrolet" />
+    <item first="Honda, Хонда"  second="купить" label="Honda" />
+    <item first="HYUNDAI, Хундай"  second="купить" label="Hyundai" />
+    <item first="Kia, Киа"  second="купить" label="Kia" />
+    <item first="Mazda, Мазда"  second="купить" label="Mazda" />
+    <item first="Mercedes, Мерседес"  second="купить" label="Mercedes" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши"  second="купить" label="Mitsubishi" />
+    <item first="Nissan, Ниссан, Нисан"  second="купить" label="Nissan" />
+    <item first="Opel, Опель"  second="купить" label="Opel" />
+    <item first="Peugeot, Пежо"  second="купить" label="Peugeot" />
+    <item first="Toyota, Тойота"  second="купить" label="Toyota" />
+    <item first="Skoda, Шкода"  second="купить" label="Skoda" />    
+    <item first="Subaru, Субару"  second="купить" label="Subaru" />    
+    <item first="Lexus, Лексус"  second="купить" label="Lexus" />    
+    <item first="Infinity, Инфинити"  second="купить" label="Infinity" />
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="купить" label="Volkswagen" />
+    <item first="Рено, Renault"  second="купить" label="Renault" />
+    
+ </report>
+ 
+ <report id="buy_repairs" title="Спрос на запчасти" type="barchart" sorted="true" >
+    <item first="Ford, Форд"  second="запчасти" label="Ford" />
+    <item first="Audi, Ауди"  second="запчасти" label="Audi" />
+    <item first="BMW, БМВ"  second="запчасти" label="BMW" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="запчасти" label="Chevrolet" />
+    <item first="Honda, Хонда"  second="запчасти" label="Honda" />
+    <item first="HYUNDAI, Хундай"  second="запчасти" label="Hyundai" />
+    <item first="Kia, Киа"  second="запчасти" label="Kia" />
+    <item first="Mazda, Мазда"  second="запчасти" label="Mazda" />
+    <item first="Mercedes, Мерседес"  second="запчасти" label="Mercedes" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши"  second="запчасти" label="Mitsubishi" />
+    <item first="Nissan, Ниссан, Нисан"  second="запчасти" label="Nissan" />
+    <item first="Opel, Опель"  second="запчасти" label="Opel" />
+    <item first="Peugeot, Пежо"  second="запчасти" label="Peugeot" />
+    <item first="Toyota, Тойота"  second="запчасти" label="Toyota" />
+    <item first="Skoda, Шкода"  second="запчасти" label="Skoda" />    
+    <item first="Subaru, Субару"  second="запчасти" label="Subaru" />    
+    <item first="Lexus, Лексус"  second="запчасти" label="Lexus" />    
+    <item first="Infinity, Инфинити"  second="запчасти" label="Infinity" />
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="запчасти" label="Volkswagen" />
+    <item first="Рено, Renault"  second="запчасти" label="Renault" />
+ </report>
+ 
+ 
+  <report id="razbor_avto_need" title="Спрос на авторазборки" type="barchart" sorted="true" >
+    <item first="Ford, Форд"  second="разборка, разбор, запчасти бу" label="Ford" />
+    <item first="Audi, Ауди"  second="разборка, разбор, запчасти бу" label="Audi" />
+    <item first="BMW, БМВ"  second="разборка, разбор, запчасти бу" label="BMW" />
+    <item first="CHEVROLET, Шевроле, Шевролет"  second="разборка, разбор, запчасти бу" label="Chevrolet" />
+    <item first="Honda, Хонда"  second="разборка, разбор, запчасти бу" label="Honda" />
+    <item first="HYUNDAI, Хундай"  second="разборка, разбор, запчасти бу" label="Hyundai" />
+    <item first="Kia, Киа"  second="разборка, разбор, запчасти бу" label="Kia" />
+    <item first="Mazda, Мазда"  second="разборка, разбор, запчасти бу" label="Mazda" />
+    <item first="Mercedes, Мерседес"  second="разборка, разбор, запчасти бу" label="Mercedes" />
+    <item first="Mitsubishi, Мицубиси, Митсубиси, митсубиши"  second="разборка, разбор, запчасти бу" label="Mitsubishi" />
+    <item first="Nissan, Ниссан, Нисан"  second="разборка, разбор, запчасти бу" label="Nissan" />
+    <item first="Opel, Опель"  second="разборка, разбор, запчасти бу" label="Opel" />
+    <item first="Peugeot, Пежо"  second="разборка, разбор, запчасти бу" label="Peugeot" />
+    <item first="Toyota, Тойота"  second="разборка, разбор, запчасти бу" label="Toyota" />
+    <item first="Skoda, Шкода"  second="разборка, разбор, запчасти бу" label="Skoda" />    
+    <item first="Subaru, Субару"  second="разборка, разбор, запчасти бу" label="Subaru" />    
+    <item first="Lexus, Лексус"  second="разборка, разбор, запчасти бу" label="Lexus" />    
+    <item first="Infinity, Инфинити"  second="разборка, разбор, запчасти бу" label="Infinity" />
+    <item first="Volkswagen, Фольцваген, Фольксваген"  second="разборка, разбор, запчасти бу" label="Volkswagen" />
+    <item first="Рено, Renault"  second="разборка, разбор, запчасти бу" label="Renault" />
+ </report>
+</reports>

@@ -1,0 +1,3 @@
+python-dateutil>=1.4
+cssutils>=0.9.6b3
+lxml>=2.0
