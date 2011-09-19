@@ -5,7 +5,6 @@ import time
 import gzip
 import StringIO
 import zlib
-import winsound
 from HTMLParser import HTMLParser
 from urllib2 import urlopen
 import codecs

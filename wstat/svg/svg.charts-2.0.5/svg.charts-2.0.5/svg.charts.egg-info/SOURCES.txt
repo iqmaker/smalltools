@@ -1,4 +1,3 @@
-README.txt
 license.txt
 readme.txt
 release.howto
