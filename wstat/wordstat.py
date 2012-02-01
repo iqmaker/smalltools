@@ -20,7 +20,7 @@ from pygooglechart import SimpleLineChart, StackedHorizontalBarChart, StackedVer
     GroupedHorizontalBarChart, GroupedVerticalBarChart
 from pygooglechart import PieChart2D
 from pygooglechart import PieChart3D
-
+from datetime import date
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, '..'))
 
@@ -213,7 +213,7 @@ class Wordstat:
     def set_headers( self, key, value):
         self.headers[key]=value
 
-    def parse( self, word, second=True, sleep=10 ):
+    def parse( self, word, all_pages=True, sleep=10 ):
         print( "%s" % word.decode("utf-8") )
         self.values['page']=1
         self.values['text']=word
@@ -227,12 +227,12 @@ class Wordstat:
             referer=self.base_url + data
 
             try:
+                we = WordsExtraction()
                 response = urllib2.urlopen( req )
                 outdata = decode( response )
-                we = WordsExtraction()
                 we.feed( outdata )
             except:
-                self.parse(word, second, sleep )
+                self.parse(word, all_pages, sleep )
 
             self.base.extend( we.get_base() )
             self.depend.extend( we.get_depend() )
@@ -254,13 +254,13 @@ class Wordstat:
             else:
                 nextpage = True
 
-            if not second or not nextpage:
+            if not all_pages or not nextpage:
                 break;
         return
 
 
 class Statist:
-    def extract_data(self, data):
+    def extract_data(self, data, all_pages=False):
         stat = []
         for atom in data:
             bases, firsts, seconds, thirds = atom
@@ -278,23 +278,23 @@ class Statist:
                             for third in thirds:
                                 td = first + ' ' + second + ' ' + third
                                 ss = Wordstat()
-                                ss.parse( td, False )
+                                ss.parse( td, all_pages )
                                 curdata.extend( ss.get_base() )
                         else:
                             ts = Wordstat()
-                            ts.parse( td, False )
-                            curdata.extend( ss.get_base() )
+                            ts.parse( td, all_pages )
+                            curdata.extend( ts.get_base() )
                 else:
                     ts = Wordstat()
-                    ts.parse( td, False )
-                    curdata.extend( ss.get_base() )
+                    ts.parse( td, all_pages )
+                    curdata.extend( ts.get_base() )
 
             stat.append( curdata )
         return stat;
 
     def calculate_deep(self, data):
         """
-            Dat is list of data, example:
+            Data is list of data, example:
             [ [ ['ford'], ['ford focus', 'ford mondeo'], ['repair', 'tools', 'services'] ],  ]
             selected 'ford' count as base value
             next :
@@ -433,8 +433,11 @@ class Report:
                 for index in range(len(self.calcdata)):
                     self.items[index]['count'] = self.calcdata[index]
 
-            elif self.get_type() == 'list':
-                self.calcdata = s.extract_data(statdata)
+            elif self.get_type() == 'simple_list' or self.get_type() == 'extra_list' or self.get_type() == 'html' or self.get_type() == 'extra_html':
+                if self.get_type() == 'extra_list' or self.get_type() == 'extra_html': 
+                    self.calcdata = s.extract_data(statdata, True )
+                else:
+                    self.calcdata = s.extract_data(statdata)
 
             self.calculated = True
         #print( self.items )
@@ -446,7 +449,7 @@ class Report:
         return self.calcdata
 
 
-def repors_loader( filename ):
+def reports_loader( filename ):
     tree = etree.parse( filename )
     root = tree.getroot()
     nodes = root.findall( "report" )
@@ -499,17 +502,60 @@ def annotate_labels( labels, data, absolute="part" ):
 
     return nlabels
 
+class HTMLViewer:
+    def __init__(self):
+        self.title = ''
+        self.labels = []
+        self.data = []
+    def set_data(self, title, labels, data ):
+        self.title = title
+        self.labels = labels
+        self.data=data
+
+    def get_html(self, file_name):
+        out = open( file_name, 'w' )
+        out.write( codecs.BOM_UTF8 )
+        out.write( '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head><title>%s</title><body><h1>%s</h1>' % (self.title, self.title ) )
+        for lable, value in zip( self.labels, self.data ):
+            out.write( '<h2>%s</h2>'% lable )
+            out.write( '<ol>' )
+            for item in value:
+                word, link, count = item
+                urlparams_yandex = { 'text': word,  }
+                urlparams_google = { 'q':word, }
+                """http://www.google.ru/#sclient=psy-ab&hl=ru&site=&source=hp&q=разборка+мазда+3"""
+                oline = '<li><a href="%s">%s</a> - %s<a href="%s" style="font-size:1.2em; margin-left:20px;">yandex</a><a href="%s" style="font-size:1.2em; margin-left:20px;">google</a></li>' % ( ('http://wordstat.yandex.ru' + link), word.decode("utf-8"), count, "http://yandex.ru/yandsearch?%s" % urllib.urlencode(urlparams_yandex), "http://www.google.ru/#sclient=psy-ab&hl=ru&site=&source=hp&%s" % urllib.urlencode(urlparams_google) )
+                #print oline
+                out.write( oline.encode("utf-8") )
+            out.write( '</ol>' )
+        out.write( '</body></html>' ) 
+
+
+    def get_flat(self, file_name):
+        out = open( file_name, 'w' )
+        out.write( "Отчет : " + self.title + '\n' )
+        for lable, value in zip( self.labels, self.data ):
+            out.write( "Позиция : " + lable + '\n' )
+            for item in value:
+                word, link, count = item
+                out.write( '\t' + word + ', ' + count + '\n') 
+
 from svg.charts import bar
-def create_chart( report ):
+def create_chart( report, out_name ):
     data = report.calculate()
-    tout = open( "tmp.txt", "w")
-    tout.write( str(data) + '\n' )
-    tout.write( str(report.get_labels())  )
+    file_exists = os.path.exists( './reports/statistics_' + report.get_id() + '.py' )
+    tout = open( './reports/statistics_' + report.get_id() + '.py', "a")
+    if not file_exists:
+        tout.write( 'v = {}\n' )
+
+    dstring = "%04d-%02d-%02d"%( date.today().year, date.today().month, date.today().day )
+    tout.write( 'v["%s"]='%dstring + str(data[0]) + '\n' )
+    #tout.write( str(report.get_labels())  )
     tout.close()
 
-    result_file = str(report.get_id()) + '.png'
-    result_svg = str(report.get_id()) + '.svg'
+    result_file = None
     if report.get_type() == 'barchart':
+        result_file = out_name + '.png'
         """
         chart = StackedHorizontalBarChart(480, 40 + 15 * len(report.get_labels()), x_range=(0, max(data) ) )
         chart.set_bar_width( 10 )
@@ -538,9 +584,10 @@ def create_chart( report ):
     	no_css=False,)
         g.__dict__.update(options)
         g.add_data(dict(data=data, title='Questions'))
-        open( result_svg, 'w').write(g.burn())
+        open( result_file, 'w').write(g.burn())
 
     elif report.get_type() == 'pie':
+        result_file = out_name + '.svg'
         chart = PieChart3D( 730, 300 )
         # Add some data
         chart.add_data( data )
@@ -550,6 +597,18 @@ def create_chart( report ):
         chart.set_pie_labels( annotatel  )
         # Download the chart
         chart.download( result_file )
+
+    elif report.get_type() == 'extra_list' or report.get_type() == 'list':
+        result_file = out_name + '.txt'
+        hv = HTMLViewer()
+        hv.set_data( title=report.get_title(), labels=report.get_labels(), data=data )
+        hv.get_flat( result_file )
+
+    elif report.get_type() == 'extra_html' or report.get_type() == 'html':
+        result_file = out_name + '.html'
+        hv = HTMLViewer()
+        hv.set_data( title=report.get_title(), labels=report.get_labels(), data=data )
+        hv.get_html( result_file )
 
     return result_file
 
@@ -606,18 +665,22 @@ def create_chart( report ):
     [ [ 'форд разборка' + 'форд разбор' ...], [ .. 'opel разбор' ..], .. ]
 """
 
-def create_report_by_id(reports, id):
+def create_report_by_id(reports, id, out_name ):
     for i in reports:
         if i.get_id() == id:
-            return create_chart(i)
+            return create_chart(i, out_name )
     return ''
 
 if __name__ == '__main__':
-    reports = repors_loader( "reports.xml" )
+    reports = reports_loader( "reports.xml" )
     #create_report_by_id( reports, 'buy_auto' )
     #create_report_by_id( reports, 'razbor_avto_need' )
     #create_report_by_id( reports, 'buy_repairs' )
-    create_report_by_id(reports, 'mazda6body')
+
+    report_names = [ 'buy_tarakans', ]
+    for report_name in report_names:
+        create_report_by_id(reports, report_name, './reports/%s_%04d-%02d-%02d'%( report_name, date.today().year, date.today().month, date.today().day ) )  
+    #create_report_by_id(reports, 'mazda3body')
 
 
 

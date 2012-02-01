@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <reports>
+    
+<report id="ionization" title="Запросы по ионизаторам" type="extra_html">
+         <item first="ионизатор" second="" label="Ионизатор" />
+         <item first="озонатор" second="" label="Озонатор" />
+         <item first="воздухоочиститель" second="" label="Воздухоочиститель" />
+         <item first="запах" second="" label="Запах" />
+         <item first="вонь" second="" label="Вонь" />
+         <item first="ионизация воздуха" second="" label="Ионизация воздуха" />
+         <item first="лампа чижевского, люстра чижевского" second="" label="Чижевский" />
+</report>
+
+<report id="buy_tarakans" title="Купить тараканов" type="extra_html">
+         <item first="купить тараканов" second="" label="Купить тараканов" />
+</report>
+
+
+ <report id="buy_around" title="Запросы со купить" type="extra_html">
+    <item first="купить" second="" label="Купить" />
+    <!-- <item first="мазда 6 разборка" label="мазда 6" /> -->
+</report>
+
+   
+<report id="mazda_around" title="Запросы со словом мазда 3" type="extra_html">
+    <item first="мазда, mazda" second="3, 6" label="мазда 3" />
+    <!-- <item first="мазда 6 разборка" label="мазда 6" /> -->
+</report>
 
 <report id="mazda3body" title="Распространенность модели кузова Мазда 3" type="pie" >
     <item first="мазда 3 хэтчбек" label="Хэтчбек" />

@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:a3="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" a3:scriptImplementation="Adobe" width="480" viewBox="0 0 480 1000" height="1000">
+  <!-- Created with SVG.Graph -->
+  <!-- SVG.Graph by Jason R. Coombs -->
+  <!-- Based on SVG::Graph by Sean E. Russel -->
+  <!-- Based on Perl SVG:TT:Graph by Leo Lapworth & Stephan Morgan -->
+  <!-- //////////////////////////////////////////////////////////////////-->
+  <defs>
+    <style type="text/css">/*&#13;
+$Id: graph.css 81 2009-09-01 02:04:44Z jaraco $&#13;
+&#13;
+Base styles for svg.charts.Graph&#13;
+*/
+.svgBackground {
+    fill: #fff
+    }
+.graphBackground {
+    fill: #f0f0f0
+    }
+/* graphs titles */
+.mainTitle {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.subTitle {
+    text-anchor: middle;
+    fill: #999;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.axis {
+    stroke: #000;
+    stroke-width: 1px
+    }
+.guideLines {
+    stroke: #666;
+    stroke-width: 1px;
+    stroke-dasharray: 5, 5
+    }
+.xAxisLabels {
+    text-anchor: middle;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisLabels {
+    text-anchor: end;
+    fill: #000;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.xAxisTitle {
+    text-anchor: middle;
+    fill: #f00;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.yAxisTitle {
+    fill: #f00;
+    text-anchor: middle;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.dataPointLabel {
+    fill: #000;
+    text-anchor: middle;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+.staggerGuideLine {
+    fill: none;
+    stroke: #000;
+    stroke-width: 0.5px
+    }
+.keyText {
+    fill: #000;
+    text-anchor: start;
+    font-size: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: normal
+    }
+/*&#13;
+$Id: bar.css 65 2008-10-25 21:32:35Z jaraco $&#13;
+&#13;
+default fill styles for multiple datasets (probably only use a single&#13;
+dataset on this graph though)&#13;
+*/
+.key1, .fill1 {
+    fill: #f00;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 0.5px
+    }
+.key2, .fill2 {
+    fill: #00f;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key3, .fill3 {
+    fill: #0f0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key4, .fill4 {
+    fill: #fc0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key5, .fill5 {
+    fill: #0cf;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key6, .fill6 {
+    fill: #f0f;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key7, .fill7 {
+    fill: #0ff;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key8, .fill8 {
+    fill: #ff0;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key9, .fill9 {
+    fill: #c66;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key10, .fill10 {
+    fill: #639;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key11, .fill11 {
+    fill: #390;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }
+.key12, .fill12 {
+    fill: #96F;
+    fill-opacity: 0.5;
+    stroke: none;
+    stroke-width: 1px
+    }</style>
+  </defs>
+  <!-- include default stylesheet if none specified -->
+  <!--SVG Background-->
+  <rect y="0" width="480" class="svgBackground" x="0" height="1000"/>
+  <g transform="translate (79.0 26)">
+    <rect y="0" x="0" height="931.0" class="graphBackground" width="318.0"/>
+    <path id="xAxis" d="M 0 0 v931.0" class="axis"/>
+    <path id="yAxis" d="M 0 931.0 h318.0" class="axis"/>
+    <text class="xAxisLabels" x="0.0" y="946.0" transform="rotate(90 0 934) translate(0 -3)" style="text-anchor: start">0</text>
+    <text class="xAxisLabels" x="29.4" y="946.0" transform="rotate(90 29 934) translate(0 -3)" style="text-anchor: start">2253</text>
+    <text class="xAxisLabels" x="58.8" y="946.0" transform="rotate(90 58 934) translate(0 -3)" style="text-anchor: start">4506</text>
+    <text class="xAxisLabels" x="88.2" y="946.0" transform="rotate(90 88 934) translate(0 -3)" style="text-anchor: start">6759</text>
+    <text class="xAxisLabels" x="117.6" y="946.0" transform="rotate(90 117 934) translate(0 -3)" style="text-anchor: start">9012</text>
+    <text class="xAxisLabels" x="147.0" y="946.0" transform="rotate(90 147 934) translate(0 -3)" style="text-anchor: start">11265</text>
+    <text class="xAxisLabels" x="176.4" y="946.0" transform="rotate(90 176 934) translate(0 -3)" style="text-anchor: start">13518</text>
+    <text class="xAxisLabels" x="205.8" y="946.0" transform="rotate(90 205 934) translate(0 -3)" style="text-anchor: start">15771</text>
+    <text class="xAxisLabels" x="235.2" y="946.0" transform="rotate(90 235 934) translate(0 -3)" style="text-anchor: start">18024</text>
+    <text class="xAxisLabels" x="264.6" y="946.0" transform="rotate(90 264 934) translate(0 -3)" style="text-anchor: start">20277</text>
+    <text class="xAxisLabels" x="294.0" y="946.0" transform="rotate(90 294 934) translate(0 -3)" style="text-anchor: start">22530</text>
+    <path d="M 29.4 0 v931.0" class="guideLines"/>
+    <path d="M 58.8 0 v931.0" class="guideLines"/>
+    <path d="M 88.2 0 v931.0" class="guideLines"/>
+    <path d="M 117.6 0 v931.0" class="guideLines"/>
+    <path d="M 147.0 0 v931.0" class="guideLines"/>
+    <path d="M 176.4 0 v931.0" class="guideLines"/>
+    <path d="M 205.8 0 v931.0" class="guideLines"/>
+    <path d="M 235.2 0 v931.0" class="guideLines"/>
+    <path d="M 264.6 0 v931.0" class="guideLines"/>
+    <path d="M 294.0 0 v931.0" class="guideLines"/>
+    <text class="yAxisLabels" x="-3" y="911.725" style="text-anchor: end">Infinity</text>
+    <text class="yAxisLabels" x="-3" y="865.175" style="text-anchor: end">Lexus</text>
+    <text class="yAxisLabels" x="-3" y="818.625" style="text-anchor: end">Subaru</text>
+    <text class="yAxisLabels" x="-3" y="772.075" style="text-anchor: end">Skoda</text>
+    <text class="yAxisLabels" x="-3" y="725.525" style="text-anchor: end">Hyundai</text>
+    <text class="yAxisLabels" x="-3" y="678.975" style="text-anchor: end">Chevrolet</text>
+    <text class="yAxisLabels" x="-3" y="632.425" style="text-anchor: end">Peugeot</text>
+    <text class="yAxisLabels" x="-3" y="585.875" style="text-anchor: end">Kia</text>
+    <text class="yAxisLabels" x="-3" y="539.325" style="text-anchor: end">Honda</text>
+    <text class="yAxisLabels" x="-3" y="492.775" style="text-anchor: end">Mazda</text>
+    <text class="yAxisLabels" x="-3" y="446.225" style="text-anchor: end">Renault</text>
+    <text class="yAxisLabels" x="-3" y="399.675" style="text-anchor: end">Mitsubishi</text>
+    <text class="yAxisLabels" x="-3" y="353.125" style="text-anchor: end">Opel</text>
+    <text class="yAxisLabels" x="-3" y="306.575" style="text-anchor: end">Toyota</text>
+    <text class="yAxisLabels" x="-3" y="260.025" style="text-anchor: end">Volkswagen</text>
+    <text class="yAxisLabels" x="-3" y="213.475" style="text-anchor: end">Audi</text>
+    <text class="yAxisLabels" x="-3" y="166.925" style="text-anchor: end">BMW</text>
+    <text class="yAxisLabels" x="-3" y="120.375" style="text-anchor: end">Nissan</text>
+    <text class="yAxisLabels" x="-3" y="73.825" style="text-anchor: end">Mercedes</text>
+    <text class="yAxisLabels" x="-3" y="27.275" style="text-anchor: end">Ford</text>
+    <rect y="884.45" x="0.0" height="36.55" class="fill1" width="14.223701731"/>
+    <rect y="837.9" x="0.0" height="36.55" class="fill1" width="34.737150466"/>
+    <rect y="791.35" x="0.0" height="36.55" class="fill1" width="52.1187749667"/>
+    <rect y="744.8" x="0.0" height="36.55" class="fill1" width="64.6460719041"/>
+    <rect y="698.25" x="0.0" height="36.55" class="fill1" width="76.1163781625"/>
+    <rect y="651.7" x="0.0" height="36.55" class="fill1" width="91.8537949401"/>
+    <rect y="605.15" x="0.0" height="36.55" class="fill1" width="92.6367509987"/>
+    <rect y="558.6" x="0.0" height="36.55" class="fill1" width="97.5171770972"/>
+    <rect y="512.05" x="0.0" height="36.55" class="fill1" width="124.385619174"/>
+    <rect y="465.5" x="0.0" height="36.55" class="fill1" width="131.706258322"/>
+    <rect y="418.95" x="0.0" height="36.55" class="fill1" width="143.633288948"/>
+    <rect y="372.4" x="0.0" height="36.55" class="fill1" width="151.149667111"/>
+    <rect y="325.85" x="0.0" height="36.55" class="fill1" width="176.987217044"/>
+    <rect y="279.3" x="0.0" height="36.55" class="fill1" width="188.992543276"/>
+    <rect y="232.75" x="0.0" height="36.55" class="fill1" width="189.749400799"/>
+    <rect y="186.2" x="0.0" height="36.55" class="fill1" width="190.506258322"/>
+    <rect y="139.65" x="0.0" height="36.55" class="fill1" width="201.154460719"/>
+    <rect y="93.1" x="0.0" height="36.55" class="fill1" width="201.728628495"/>
+    <rect y="46.55" x="0.0" height="36.55" class="fill1" width="262.668708389"/>
+    <rect y="0.0" x="0.0" height="36.55" class="fill1" width="280.024234354"/>
+    <g>
+      <text y="908.725" x="19.223701731" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">1090</text>
+      <text y="908.725" x="19.223701731" class="dataPointLabel" style="text-anchor: start; ">1090</text>
+      <text y="862.175" x="39.737150466" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">2662</text>
+      <text y="862.175" x="39.737150466" class="dataPointLabel" style="text-anchor: start; ">2662</text>
+      <text y="815.625" x="57.1187749667" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">3994</text>
+      <text y="815.625" x="57.1187749667" class="dataPointLabel" style="text-anchor: start; ">3994</text>
+      <text y="769.075" x="69.6460719041" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">4954</text>
+      <text y="769.075" x="69.6460719041" class="dataPointLabel" style="text-anchor: start; ">4954</text>
+      <text y="722.525" x="81.1163781625" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">5833</text>
+      <text y="722.525" x="81.1163781625" class="dataPointLabel" style="text-anchor: start; ">5833</text>
+      <text y="675.975" x="96.8537949401" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">7039</text>
+      <text y="675.975" x="96.8537949401" class="dataPointLabel" style="text-anchor: start; ">7039</text>
+      <text y="629.425" x="97.6367509987" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">7099</text>
+      <text y="629.425" x="97.6367509987" class="dataPointLabel" style="text-anchor: start; ">7099</text>
+      <text y="582.875" x="102.517177097" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">7473</text>
+      <text y="582.875" x="102.517177097" class="dataPointLabel" style="text-anchor: start; ">7473</text>
+      <text y="536.325" x="129.385619174" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">9532</text>
+      <text y="536.325" x="129.385619174" class="dataPointLabel" style="text-anchor: start; ">9532</text>
+      <text y="489.775" x="136.706258322" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">10093</text>
+      <text y="489.775" x="136.706258322" class="dataPointLabel" style="text-anchor: start; ">10093</text>
+      <text y="443.225" x="148.633288948" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">11007</text>
+      <text y="443.225" x="148.633288948" class="dataPointLabel" style="text-anchor: start; ">11007</text>
+      <text y="396.675" x="156.149667111" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">11583</text>
+      <text y="396.675" x="156.149667111" class="dataPointLabel" style="text-anchor: start; ">11583</text>
+      <text y="350.125" x="181.987217044" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">13563</text>
+      <text y="350.125" x="181.987217044" class="dataPointLabel" style="text-anchor: start; ">13563</text>
+      <text y="303.575" x="193.992543276" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">14483</text>
+      <text y="303.575" x="193.992543276" class="dataPointLabel" style="text-anchor: start; ">14483</text>
+      <text y="257.025" x="194.749400799" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">14541</text>
+      <text y="257.025" x="194.749400799" class="dataPointLabel" style="text-anchor: start; ">14541</text>
+      <text y="210.475" x="195.506258322" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">14599</text>
+      <text y="210.475" x="195.506258322" class="dataPointLabel" style="text-anchor: start; ">14599</text>
+      <text y="163.925" x="206.154460719" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">15415</text>
+      <text y="163.925" x="206.154460719" class="dataPointLabel" style="text-anchor: start; ">15415</text>
+      <text y="117.375" x="206.728628495" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">15459</text>
+      <text y="117.375" x="206.728628495" class="dataPointLabel" style="text-anchor: start; ">15459</text>
+      <text y="70.825" x="267.668708389" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">20129</text>
+      <text y="70.825" x="267.668708389" class="dataPointLabel" style="text-anchor: start; ">20129</text>
+      <text y="24.275" x="285.024234354" style="text-anchor: start;  stroke: #fff; stroke-width: 2;" class="dataPointLabel">21459</text>
+      <text y="24.275" x="285.024234354" class="dataPointLabel" style="text-anchor: start; ">21459</text>
+    </g>
+  </g>
+  <text y="16" x="240" class="mainTitle">Спрос на авторазборки</text>
+  <g transform="translate(407 46)">
+    <rect y="0" x="0" height="12" class="key1" width="12"/>
+    <text y="12" x="17" class="keyText">Questions</text>
+  </g>
+</svg>
