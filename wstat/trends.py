@@ -3,6 +3,7 @@ import sys
 import imp
 import datetime
 import urllib 
+import wordstat
 
 DAY, WEEK, MONTH, YEAR = 1, 7, 30, 365
 
@@ -57,7 +58,16 @@ def create_table_row( tup, *vals ):
 
     return ''.join( result )
 
+
 def html_report( result_report, test_name ):
+    
+    reports = wordstat.reports_loader( "reports.xml" )
+    for i in reports:
+        if i.get_id() == test_name:
+            r = i
+    report_title = r.get_title()
+    report_labels = r.get_labels()
+
     out = file( './reports/' + test_name + '.html', 'w' )
     out.write( 
     """<html>
@@ -113,11 +123,15 @@ def html_report( result_report, test_name ):
                 color:red !important;
              } 
              .right { float:right; margin-right:10px; }
+             h1 { color:#666; }
+             .date { font-size:10px; color:#444; }
              </style>
         </head>
         <title>%s</title>
         <body>
-            <table border="1" >""" %test_name )
+            <h1>Отчет: «%s»</h1>
+            <span class="date">Дата генерации: %s, идентификатор: %s</span>
+            <table border="1" >""" % ( report_title, report_title, datetime.date.today().isoformat(), test_name ) )
 
     first = result_report[0]
     out.write( create_table_head( first[4] ) )
@@ -128,17 +142,37 @@ def html_report( result_report, test_name ):
         last = r[2]
         progress = r[3]
         vals = r[4]
-        out.write( create_table_row( vals, word, first, last, progress ) )
+        out.write( create_table_row( vals, equals[word], first, last, progress ) )
       
     out.write( '</table></body></html>' )
     out.close()
-    
+   
+equals = { }  
+def full_data_sorter( data ):
+    for i in data:
+        v = data[i]
+        for num, item in enumerate( v ):
+            word, link, count = item
+            wl = sorted( word.split() )
+            nword = ' '.join( wl )
+            item = ( nword, wl, count ) 
+            equals[nword] = word
+            v[ num ] = item
 
-def statist( testname, interval ):
+def statist( original_testname, interval = MONTH ):
+
+    testname = 'statistics_' + original_testname
     fromdate = (datetime.date.today() - datetime.timedelta(interval) ).isoformat()
     todate = datetime.date.today().isoformat()
 
     data = imp.load_source('testdata', './reports/' + testname + '.py' )
+
+    full_data_sorter( data.v )
+    for r in data.v:
+        """Преобразование к целому последнего числа, чтобы дальше не мучаться"""
+        data.v[ r ] = [ ( x[0], x[1], int( x[2] ) ) for x in data.v[r] ]
+
+
     all_days = data.v.keys()
     active_days = []
     for i in all_days:
@@ -157,6 +191,18 @@ def statist( testname, interval ):
                 table[word] = {i: int(count) }
 
     result_report = []
+
+    #for i in table:
+    #    print i.decode( 'utf-8' ), table[i]
+    #print table
+    #Найдем самые маленькие значения на каждый день, для статистики
+    min_keys = data.v.keys()
+    min_items = {}
+    for mk in min_keys:
+        mv = min( sorted( [ x[2] for x in data.v[ mk ] ] ) )
+        min_items[mk]=mv
+
+    #print "min_items", min_items
     for word in table.keys():
         vals = table[word]
 
@@ -165,7 +211,7 @@ def statist( testname, interval ):
                 vals[d] = 0
 
         first_count = vals[ active_days[0] ] 
-        base = first_count if first_count > 0 else 1
+        base = first_count if first_count > 0 else min_items[ active_days[0] ] - 1
         absolute_positive, absolute_negative, absolute_progress, positive, negative, progress = 0, 0, 0.0, 0, 0, 0.0
         for day in active_days[1:]:
             vals[day] -= first_count
@@ -179,15 +225,29 @@ def statist( testname, interval ):
         absolute_progress = absolute_positive - absolute_negative
         positive = float( absolute_positive ) / base
         negative = float( absolute_negative ) / base
-        progress = float( absolute_progress ) / base * 100.0
+        progress = ( float( sum( [vals[x] for x in vals] ) ) / base - 1.0 ) * 100.0
         result_report.append( (word, base, sum( [vals[x] for x in vals] ), progress, vals,) )
         result_report = sorted( result_report, key=lambda x: -x[3] )
-        html_report( result_report, testname )
+
+    html_report( result_report, original_testname )
+
+def create_index( reports ):
+    out = file( 'index.html', 'w' )
+    out.write( '<html><head></head><body>' )
+    for r in reports:
+        print r
+        out.write( '<a href="%s">%s</a><br/>' % ( './reports/' + str( r.attrib['id'] ) + '.html', r.attrib['id'] ) )
+
+    out.write( '</body></html>' )
 
 def main():
-    
-    report_name = 'test_around'
-    statist( 'statistics_' + report_name, interval = MONTH )
+    items = wordstat.load_rbuild( 'reports.xml' )    
+    for i in items:
+        print i.id
+        report_name = i.id
+        statist( report_name )
+
+    create_index( items )
 
 if __name__ == '__main__' : 
     main() 

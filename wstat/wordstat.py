@@ -21,6 +21,7 @@ from pygooglechart import SimpleLineChart, StackedHorizontalBarChart, StackedVer
 from pygooglechart import PieChart2D
 from pygooglechart import PieChart3D
 from datetime import date
+import datetime
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, '..'))
 
@@ -182,20 +183,19 @@ class Wordstat:
         self.base=[]
         self.depend=[]
         self.base_count=0
-        self.values = { 'cmd':'words', 'ts':'1297683175', 'key':'267137b0bacaa5d9ffb6c2ef45d90810'}
+        self.values = { 'cmd':'words', 'geo':'', 'text_geo':''}
         self.referer = 'http://wordstat.yandex.ru/'
         self.base_url = 'http://wordstat.yandex.ru/?'
         self.headers = {
 					'Host' : 'wordstat.yandex.ru',
-					'User-Agent' : 'Mozilla/5.0 (Windows; U; Windows NT 5.1; ru; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13',
+					'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.151 Chrome/18.0.1025.151 Safari/535.19',
 					'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-					'Accept-Language' : 'ru-ru,ru;q=0.8,en-us;q=0.5,en;q=0.3',
-					'Accept-Encoding' : 'gzip,deflate',
-					'Accept-Charset' : 'windows-1251,utf-8;q=0.7,*;q=0.7',
-					'Keep-Alive' : '115',
+					'Accept-Language' : 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4',
+					'Accept-Encoding' : 'gzip,deflate,sdch',
+					'Accept-Charset' : 'windows-1251,utf-8;q=0.7,*;q=0.3',
 					'Connection' : 'keep-alive',
 					'Referer' : 'http://wordstat.yandex.ru/',
-					'Cookie' : 'yandexuid=2466623021266432176; yabs-frequency=/3/Tm805rm6F000/; fuid01=4adb671208d39176.Hwv7MO9L_HGqQtH32e8RIJGely6JfkkboT1rkrZLKeGK66wA__23E8c3i9Tqui-fI8E_zZDhLw_zpb-44Fc7F0OoaJxLqkfls0q_3hIKlIEjhRdCYL18fY8H4psMykjd; my=YyMCAQUA; L=Vg0LemFTR1JcA0RAU2FQdFEBAltlZgkEGiMhXw4Pel9JFQw4Hk0pWURFRgZ5FDkhJ0YxNAIZCwNrKh8gEz41Tw==.1291390431.8486.213251.339520e61be5fa481aee6bd4b4e8f973; yp=4294967295.cw.48677%231300105210.ygu.1; yandex_gid=10758',
+                    'Cookie' : 'yandexuid=1355143301318790899; fuid01=4dc7ff1c1d1605b3.O6zynGckTNmwnzKRJdZvQSSOW1JDtD_q3cljDSwK0YareCg2xrCljDCDSGR--6wVhODeQMHTBuG5DJE9tV1vP0PaDHoOoO3V7yiPYVeCLTA81aG82mqIrs18mmiW137r; yandex_login=poncy.ru; my=YygBgNU2AQEA; yp=1637339331.sp.#1651651362.udn.cG9uY3kucnU=; Session_id=1336291362.2.3.100619661.2:279875870:180.8:1336291362516:1595440222:7.83997.49047.c9902847e838acbea7ab726b299814c8; L=RlQJflpFaUF4XUZJZAZ0AFd9YgZcRmpeN14GCzZpJ0IzIVdwGlFTCA5jAFdHByYwXypEM1MBZGZBfCsAIxZYaQ==.1336291362.9346.293945.a1c09cbac1e3e7cbf8fabe19c400423c; spravka=dD0xMzM2MzA3MzcwO2k9OTUuMjQuMTI0Ljk0O3U9MTMzNjMwNzM3MDE2ODg1MzYxMjtoPTA2YmZhNjg3NGEzMWIwMzJhOWMwNmE5OTBiMDgzYTgx; aw=1_teJxinMEgtFWhSWLDpGUc63WSJI6UTeLQ1FISMFFo5yhTT5JwkJjEoayiJMCx#tr5NDHUgLbO/m+AykTRbM4VDRdVKwANIzZZUEaqLncnwCim+xW8SxHEhvsFnM#tsR5I3wHSMtpKAmvmLuZYrKckkGO4h6Nc3UiiAEhf0lUS+HDvMEeCgZLADyBd#YoS7EcWbRMQ4GBob/AAAAAP//AwCfxDAf#A#; yabs-frequency=/4/cG0200uPha_H99XF/Tm805tWDFDZ603fu3IFSnW0wU0qkT7O1Gt0D9RDe0KDi3KKFSm124mry0003Wi00FGyDd0001000/; __utma=190882677.1199585786.1336909599.1336909599.1336909599.1; __utmc=190882677; __utmz=190882677.1336909599.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=190882677.|2=Account=Yes=1^3=Login=Yes=1',
 		}
 
     def get_base( self ):
@@ -213,10 +213,10 @@ class Wordstat:
     def set_headers( self, key, value):
         self.headers[key]=value
 
-    def parse( self, word, all_pages=True, sleep=10 ):
+    def parse( self, word, all_pages=True, sleep=10, page=1 ):
         print( "%s" % word.decode("utf-8") )
-        self.values['page']=1
-        self.values['text']=word
+        self.values['page']=page
+        self.values['t']=word
         nextpage = True
         while nextpage:
             time.sleep( random.randint(sleep, sleep + sleep/2.0) )
@@ -230,15 +230,16 @@ class Wordstat:
                 we = WordsExtraction()
                 response = urllib2.urlopen( req )
                 outdata = decode( response )
+                open( "tmpfile.html", "w" ).write( outdata )
                 we.feed( outdata )
             except:
-                self.parse(word, all_pages, sleep )
+                self.parse(word, all_pages, sleep, int(self.values['page']) )
 
             self.base.extend( we.get_base() )
             self.depend.extend( we.get_depend() )
             self.base_count = we.get_basecount()
 
-            print( nextpage, len( self.base ), len( self.depend ) )
+            print( nextpage, len( self.base ), len( self.depend ), self.values['page'] )
 
             oldpage = int( self.values['page'] )
             if len(we.pages) > 0:
@@ -426,6 +427,7 @@ class Report:
                     bases = [ x.strip() for x in i['base'].split(',') ]
 
                 statdata.append( [bases, firsts, seconds, thirds ] )
+            
             s = Statist()
             if self.get_type() == 'barchart' or self.get_type() == 'pie':
                 self.calcdata = s.calculate_deep(statdata)
@@ -448,6 +450,51 @@ class Report:
 
         return self.calcdata
 
+
+class RbuildItem:
+
+    def __init__(self):
+        self.id = ''
+        self.interval = ''
+        self.lastdate = ''
+        self.nextdate = ''
+        self.attrib = {}
+
+    def load_from_node( self, node ):
+        self.attrib = node.attrib
+        self.id = node.attrib[ 'id' ]
+        self.interval = node.attrib[ 'interval' ]
+        self.lastdate = node.attrib[ 'lastdate' ]
+        self.nextdate = node.attrib[ 'nextdate' ]
+
+    def __str__(self):
+        return self.id + '->' + self.interval + '->' + self.lastdate + '->' + self.nextdate
+
+    def get_id(self):
+        return self.id
+
+def reload_rbuild( ritems, filename ):
+    tree = etree.parse( filename )
+    root = tree.getroot() 
+    nodes = root.findall( 'rbuild/item' )
+    for ri in ritems:
+        for n in nodes:
+            if n.attrib[ 'id' ] == ri.id:
+                n.attrib = ri.attrib
+    #for i in ritems: print i.attrib
+    out = etree.tostring( root, encoding='UTF-8' )
+    file( 'reports.xml', 'w' ).write( out )
+    
+def load_rbuild( filename ):
+    tree = etree.parse( filename )
+    root = tree.getroot()
+    nodes = root.findall( "rbuild/item" )
+    ritems = []
+    for i in nodes:
+        ri = RbuildItem()
+        ri.load_from_node(i)
+        ritems.append( ri )
+    return ritems
 
 def reports_loader( filename ):
     tree = etree.parse( filename )
@@ -543,19 +590,22 @@ class HTMLViewer:
 from svg.charts import bar
 def create_chart( report, out_name ):
     data = report.calculate()
-    file_exists = os.path.exists( './reports/statistics_' + report.get_id() + '.py' )
-    tout = open( './reports/statistics_' + report.get_id() + '.py', "a")
-    if not file_exists:
-        tout.write( 'v = {}\n' )
-
     dstring = "%04d-%02d-%02d"%( date.today().year, date.today().month, date.today().day )
-    tout.write( 'v["%s"]='%dstring + str(data[0]) + '\n' )
-    #tout.write( str(report.get_labels())  )
-    tout.close()
+
+    if report.get_type() == 'extra_html':
+        file_exists = os.path.exists( './reports/statistics_' + report.get_id() + '.py' )
+        tout = open( './reports/statistics_' + report.get_id() + '.py', "a")
+        if not file_exists:
+            tout.write( 'v = {}\n' )
+            
+        sdata = []
+        for d in data: sdata += d
+        tout.write( 'v["%s"]='%dstring + str(sdata) + '\n' )
+        tout.close()
 
     result_file = None
     if report.get_type() == 'barchart':
-        result_file = out_name + '.png'
+        result_file = out_name + '.svg'
         """
         chart = StackedHorizontalBarChart(480, 40 + 15 * len(report.get_labels()), x_range=(0, max(data) ) )
         chart.set_bar_width( 10 )
@@ -665,23 +715,33 @@ def create_chart( report, out_name ):
     [ [ 'форд разборка' + 'форд разбор' ...], [ .. 'opel разбор' ..], .. ]
 """
 
-def create_report_by_id(reports, id, out_name ):
+def create_report(reports, ritem, out_name ):
     for i in reports:
-        if i.get_id() == id:
+        if i.get_id() == ritem.get_id():
             return create_chart(i, out_name )
     return ''
 
+intervals = { '3':3, '2':2, '4':4, '5':5, '6':6, 'week':7, 'day':1, 'month':30, 'year':365 }
+def create_reports():
+    reports_file = 'reports.xml'
+    reports = reports_loader( reports_file )
+    items = load_rbuild( reports_file )
+
+    for ritem in items:
+        cdate = date.today().isoformat()
+        if ritem.nextdate <= cdate and cdate > ritem.lastdate:
+            create_report( reports, ritem, './reports/%s_%04d-%02d-%02d'%( ritem.id, date.today().year, date.today().month, date.today().day ) )
+            ritem.lastdate = cdate
+            ritem.attrib['lastdate'] = ritem.lastdate
+            ritem.nextdate = ( date.today() + datetime.timedelta( intervals[ ritem.interval ] ) ).isoformat()
+            ritem.attrib['nextdate'] = ritem.nextdate
+            print ritem.attrib
+        else:
+            print 'skip : ', ritem
+
+    reload_rbuild( items, reports_file )
+
 if __name__ == '__main__':
-    reports = reports_loader( "reports.xml" )
-    #create_report_by_id( reports, 'buy_auto' )
-    #create_report_by_id( reports, 'razbor_avto_need' )
-    #create_report_by_id( reports, 'buy_repairs' )
-
-    report_names = [ 'buy_tarakans', ]
-    for report_name in report_names:
-        create_report_by_id(reports, report_name, './reports/%s_%04d-%02d-%02d'%( report_name, date.today().year, date.today().month, date.today().day ) )  
-    #create_report_by_id(reports, 'mazda3body')
-
-
+    create_reports()
 
 
